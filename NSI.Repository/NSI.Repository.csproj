@@ -1,0 +1,235 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DA51E059-965F-40DC-A2A6-EA50E7173704}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NSI.Repository</RootNamespace>
+    <AssemblyName>NSI.Repository</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azure.Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Storage.0.1.3\lib\net45\Azure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\Microsoft.WindowsAzure.ServiceRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.7.2.1\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandboxable.Microsoft.WindowsAzure.Storage, Version=8.7.0.0, Culture=neutral, PublicKeyToken=dd461fa2f43d8736, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sandboxable.Microsoft.WindowsAzure.Storage.1.1.9\lib\net452\Sandboxable.Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Spatial, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.2\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsAzureEventSource, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\WindowsAzureEventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsAzureTelemetryEvents, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\WindowsAzureTelemetryEvents.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DeviceManagement\DeviceActionRepository.cs" />
+    <Compile Include="DeviceManagement\DevicePropertyRepository.cs" />
+    <Compile Include="DeviceManagement\DeviceRepository.cs" />
+    <Compile Include="DocumentRepository\DocumentRepository.cs" />
+    <Compile Include="DocumentRepository\FileTypeRepository.cs" />
+    <Compile Include="DocumentRepository\StorageTypeRepository.cs" />
+    <Compile Include="Extensions\DevicePingExtension.cs" />
+    <Compile Include="Extensions\DevicePropertyValuesExtension.cs" />
+    <Compile Include="Extensions\DeviceStatusExtension.cs" />
+    <Compile Include="Extensions\DocumentExtension.cs" />
+    <Compile Include="Document\DocumentTypeRepository.cs" />
+    <Compile Include="Document\GeneratedDocumentRepository.cs" />
+    <Compile Include="Extensions\DeviceExtension.cs" />
+    <Compile Include="Extensions\DocumentTypeExtension.cs" />
+    <Compile Include="Extensions\FileTypeExtension.cs" />
+    <Compile Include="Extensions\FolderExtension.cs" />
+    <Compile Include="Extensions\GeneratedDocumentExtension.cs" />
+    <Compile Include="Extensions\IncidentTypeExtension.cs" />
+    <Compile Include="Extensions\IncidentPriorityExtension.cs" />
+    <Compile Include="Extensions\IncidentStatusExtension.cs" />
+    <Compile Include="Extensions\IncidentSettlementExtension.cs" />
+    <Compile Include="Extensions\IncidentExtension.cs" />
+    <Compile Include="Extensions\LanguageExtension.cs" />
+    <Compile Include="Extensions\IncidentWorkOrderExtension.cs" />
+    <Compile Include="Extensions\RuleActionParameterExtension.cs" />
+    <Compile Include="Extensions\RuleActionExtension.cs" />
+    <Compile Include="Extensions\RuleConditionExtension.cs" />
+    <Compile Include="Extensions\RuleExtension.cs" />
+    <Compile Include="Extensions\Notifications\NotificationUserExtension.cs" />
+    <Compile Include="Extensions\StorageTypeExtension.cs" />
+    <Compile Include="Extensions\TemplateExtension.cs" />
+    <Compile Include="Extensions\TemplateVersionExtension.cs" />
+    <Compile Include="Extensions\TenantExtension.cs" />
+    <Compile Include="Extensions\RoleMemberExtension.cs" />
+    <Compile Include="Extensions\RolePermissonExtension.cs" />
+    <Compile Include="IncidentManagement\IncidentPriorityRepository.cs" />
+    <Compile Include="Extensions\RoleExtension.cs" />
+    <Compile Include="IncidentManagement\IncidentSettlementRepository.cs" />
+    <Compile Include="IncidentManagement\IncidentRepository.cs" />
+    <Compile Include="DeviceManagement\DeviceTypeRepository.cs" />
+    <Compile Include="Extensions\ActionExtension.cs" />
+    <Compile Include="Extensions\DeviceTypeExtension.cs" />
+    <Compile Include="Extensions\ModuleExtension.cs" />
+    <Compile Include="Extensions\Notifications\AttachmentExtension.cs" />
+    <Compile Include="Extensions\Notifications\EmailMessageExtension.cs" />
+    <Compile Include="Extensions\Notifications\EmailRecipientExtension.cs" />
+    <Compile Include="Extensions\Notifications\NotificationStatusExtension.cs" />
+    <Compile Include="Extensions\Notifications\SmsExtension.cs" />
+    <Compile Include="Extensions\Notifications\EmailRecipientTypeExtension.cs" />
+    <Compile Include="Extensions\Notifications\NotificationExtension.cs" />
+    <Compile Include="Extensions\Notifications\NotificationTypeExtension.cs" />
+    <Compile Include="Extensions\Notifications\WebNotificationExtension.cs" />
+    <Compile Include="Extensions\PermissionExtension.cs" />
+    <Compile Include="Extensions\PropertyExtension.cs" />
+    <Compile Include="Extensions\UserExtension.cs" />
+    <Compile Include="IncidentManagement\IncidentTypeRepository.cs" />
+    <Compile Include="IncidentManagement\IncidentWorkOrderRepository.cs" />
+    <Compile Include="Interfaces\DeviceManagement\IDeviceActionRepository.cs" />
+    <Compile Include="Interfaces\DeviceManagement\IDevicePropertyRepository.cs" />
+    <Compile Include="Interfaces\DocumentManagement\IDocumentRepository.cs" />
+    <Compile Include="Interfaces\DocumentManagement\IFileTypeRepository.cs" />
+    <Compile Include="Interfaces\DocumentManagement\IStorageTypeRepository.cs" />
+    <Compile Include="Interfaces\IncidentManagement\IIncidentPriorityRepository.cs" />
+    <Compile Include="Interfaces\DeviceManagement\IDeviceTypeRepository.cs" />
+    <Compile Include="Interfaces\IncidentManagement\IIncidentTypeRepository.cs" />
+    <Compile Include="Interfaces\IncidentManagement\IIncidentWorkOrderRepository.cs" />
+    <Compile Include="IncidentManagement\IncidentStatusRepository.cs" />
+    <Compile Include="Interfaces\DeviceManagement\IDeviceRepository.cs" />
+    <Compile Include="DevicePing\DevicePingRepository.cs" />
+    <Compile Include="Interfaces\DevicePing\IDevicePingRepository.cs" />
+    <Compile Include="Interfaces\Document\IDocumentTypeRepository.cs" />
+    <Compile Include="Interfaces\Document\IGeneratedDocumentRepository.cs" />
+    <Compile Include="Interfaces\IncidentManagement\IIncidentRepository.cs" />
+    <Compile Include="Interfaces\IncidentManagement\IIncidentSettlementRepository.cs" />
+    <Compile Include="Interfaces\Membership\ILanguageRepository.cs" />
+    <Compile Include="Interfaces\IncidentManagement\IIncidentStatusRepository.cs" />
+    <Compile Include="Interfaces\Membership\IModuleRepository.cs" />
+    <Compile Include="Interfaces\Membership\IPermissionRepository.cs" />
+    <Compile Include="Interfaces\Membership\IRoleMemberRepository.cs" />
+    <Compile Include="Interfaces\Membership\IRolePermissionRepository.cs" />
+    <Compile Include="Interfaces\Membership\IRoleRepository.cs" />
+    <Compile Include="Interfaces\Membership\ITenantRepository.cs" />
+    <Compile Include="Interfaces\Membership\IUserRepository.cs" />
+    <Compile Include="Interfaces\RuleEngine\IRuleRepository.cs" />
+    <Compile Include="Interfaces\Notifications\INotificationUserRepository.cs" />
+    <Compile Include="Interfaces\TemplateManagement\IFolderRepository.cs" />
+    <Compile Include="Interfaces\TemplateManagement\ITemplateRepository.cs" />
+    <Compile Include="Interfaces\TemplateManagement\ITemplateVersionRepository.cs" />
+    <Compile Include="Interfaces\ReportingManagement\IReportingRepository.cs" />
+    <Compile Include="Membership\LanguageRepository.cs" />
+    <Compile Include="Interfaces\Notifications\IAttachmentRepository.cs" />
+    <Compile Include="Interfaces\Notifications\IEmailMessageRepository.cs" />
+    <Compile Include="Interfaces\Notifications\IEmailRecipientRepository.cs" />
+    <Compile Include="Interfaces\Notifications\IEmailRecipientTypeRepository.cs" />
+    <Compile Include="Interfaces\Notifications\INotificationRepository.cs" />
+    <Compile Include="Interfaces\Notifications\INotificationStatusRepository.cs" />
+    <Compile Include="Interfaces\Notifications\ISmsRepository.cs" />
+    <Compile Include="Interfaces\Notifications\INotificationTypeRepository.cs" />
+    <Compile Include="Interfaces\Notifications\IWebNotificationRepository.cs" />
+    <Compile Include="Membership\ModuleRepository.cs" />
+    <Compile Include="Membership\PermissionRepository.cs" />
+    <Compile Include="Membership\RoleMemberRepository.cs" />
+    <Compile Include="Membership\RolePermissonRepository.cs" />
+    <Compile Include="Membership\RoleRepository.cs" />
+    <Compile Include="Membership\TenantRepository.cs" />
+    <Compile Include="Membership\UserRepository.cs" />
+    <Compile Include="Notifications\AttachmentRepository.cs" />
+    <Compile Include="Notifications\EmailMessageRepository.cs" />
+    <Compile Include="Notifications\EmailRecipientRepository.cs" />
+    <Compile Include="Notifications\EmailRecipientTypeRepository.cs" />
+    <Compile Include="Notifications\NotificationRepository.cs" />
+    <Compile Include="Notifications\NotificationStatusRepository.cs" />
+    <Compile Include="Notifications\NotificationUserRepository.cs" />
+    <Compile Include="Notifications\SmsRepository.cs" />
+    <Compile Include="Notifications\NotificationTypeRepository.cs" />
+    <Compile Include="Notifications\WebNotificationRepository.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TemplateManagement\FolderRepository.cs" />
+    <Compile Include="TemplateManagement\TemplateRepository.cs" />
+    <Compile Include="TemplateManagement\TemplateVersionRepository.cs" />
+    <Compile Include="RuleEngine\RuleRepository.cs" />
+    <Compile Include="ReportingManagement\ReportingRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NSI.Common\NSI.Common.csproj">
+      <Project>{d4ea37a7-2a35-4115-a274-1a943f89fbbd}</Project>
+      <Name>NSI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSI.Domain\NSI.Domain.csproj">
+      <Project>{01C53D26-9736-413C-A247-8612349B66CB}</Project>
+      <Name>NSI.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSI.EF\NSI.EF.csproj">
+      <Project>{6f99ca92-a1d3-4b11-9f8b-beb9466c0f11}</Project>
+      <Name>NSI.EF</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Mappers\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

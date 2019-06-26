@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AttachmentIdInvalid" xml:space="preserve">
+    <value>Obezbjeđeni ID priloška nije validan.</value>
+  </data>
+  <data name="AttachmentWithIdDoesNotExist" xml:space="preserve">
+    <value>Priložak sa obezbijeđenim ID-em ne postoji.</value>
+  </data>
+  <data name="EmailMessageIdInvalid" xml:space="preserve">
+    <value>Obezbjeđeni ID email poruke nije validan.</value>
+  </data>
+  <data name="EmailMessageWithIdDoesNotExist" xml:space="preserve">
+    <value>Email poruka sa obezbijeđenim ID-em ne postoji.</value>
+  </data>
+  <data name="EmailNotificationStatusIdInvalid" xml:space="preserve">
+    <value>Obezbijeđeni ID statusa notifikacije nije validan.</value>
+  </data>
+  <data name="EmailRecipientAddressAlreadyExists" xml:space="preserve">
+    <value>Primaoc emaila sa obezbijeđenom email adresom već postoji.</value>
+  </data>
+  <data name="EmailRecipientAddressEmpty" xml:space="preserve">
+    <value>Email adresa primaoca nije obezbjeđena</value>
+  </data>
+  <data name="EmailRecipientAddressInvalid" xml:space="preserve">
+    <value>Email adresa primaoca nije validna.</value>
+  </data>
+  <data name="EmailRecipientIdInvalid" xml:space="preserve">
+    <value>Obezbijeđeni ID primaoca emaila nije validan.</value>
+  </data>
+  <data name="EmailRecipientNotProvided" xml:space="preserve">
+    <value>Detalji potrebni za primaoca emaila nisu obezbjeđeni.</value>
+  </data>
+  <data name="EmailRecipientTypeCodeAlreadyExists" xml:space="preserve">
+    <value>Tip primaoca emaila sa obezbijeđenim kodom već postoji.</value>
+  </data>
+  <data name="EmailRecipientTypeCodeLengthExceeded" xml:space="preserve">
+    <value>Kod tipa primaoca emaila može imati najviše 100 karaktera.</value>
+  </data>
+  <data name="EmailRecipientTypeIdInvalid" xml:space="preserve">
+    <value>Obezbijeđeni ID tipa primaoca emaila nije validan.</value>
+  </data>
+  <data name="EmailRecipientTypeNameLengthExceeded" xml:space="preserve">
+    <value>Naziv tipa primaoca emaila može imati najviše 100 karaktera.</value>
+  </data>
+  <data name="EmailRecipientTypeNotProvided" xml:space="preserve">
+    <value>Detalji potrebni za tip primaoca emaila nisu obezbjeđeni.</value>
+  </data>
+  <data name="EmailRecipientTypeWithIdDoesNotExist" xml:space="preserve">
+    <value>Tip primaoca emaila sa obezbijeđenim ID-em ne postoji.</value>
+  </data>
+  <data name="EmailRecipientWithIdDoesNotExist" xml:space="preserve">
+    <value>Primaoc emaila sa obezbijeđenim ID-em ne postoji.</value>
+  </data>
+  <data name="NotificationDateCreatedInvalid" xml:space="preserve">
+    <value>Obezbjeđeni datum kreiranja notifikacije nije validan.</value>
+  </data>
+  <data name="NotificationDateCreatedNotProvided" xml:space="preserve">
+    <value>Datum kreiranja notifikacije nije obezbjeđen.</value>
+  </data>
+  <data name="NotificationExternalIdInvalid" xml:space="preserve">
+    <value>Obezbijeđeni eksterni ID notifikacije emaila nije validan.</value>
+  </data>
+  <data name="NotificationExternalIdNotProvided" xml:space="preserve">
+    <value>Eksterni ID notifikacije nije obezbjeđen.</value>
+  </data>
+  <data name="NotificationIdInvalid" xml:space="preserve">
+    <value>Obezbjeđeni ID notifikacije nije validan.</value>
+  </data>
+  <data name="NotificationNotProvided" xml:space="preserve">
+    <value>Detalji potrebni za notifikaciju nisu obezbjeđeni.</value>
+  </data>
+  <data name="NotificationStatusIdDoesNotExist" xml:space="preserve">
+    <value>Status notifikacije sa obezbijeđenim ID-em ne postoji.</value>
+  </data>
+  <data name="NotificationStatusIdNotProvided" xml:space="preserve">
+    <value>ID statusa notifikacije nije obezbjeđen.</value>
+  </data>
+  <data name="NotificationTypeIdInvalid" xml:space="preserve">
+    <value>Obezbjeđeni ID za tip notifikacije nije validan.</value>
+  </data>
+  <data name="NotificationTypeIdNotProvided" xml:space="preserve">
+    <value>ID tipa notifikacije nije obezbjeđen.</value>
+  </data>
+  <data name="NotificationTypeWithIdDoesNotExist" xml:space="preserve">
+    <value>Tip notifikacije sa obezbjeđenim ID-em ne postoji.</value>
+  </data>
+  <data name="NotificationWithIdDoesNotExist" xml:space="preserve">
+    <value>Notifikacija sa obezbijeđenim ID-em ne postoji.</value>
+  </data>
+  <data name="NotificationStatusCodeNotProvided" xml:space="preserve">
+    <value>Kod statusa notifikacije nije zadan.</value>
+  </data>
+  <data name="NotificationStatusInvalidId" xml:space="preserve">
+    <value>ID statusa notifikacije nije validan.</value>
+  </data>
+  <data name="NotificationStatusNameNotProvided" xml:space="preserve">
+    <value>Naziv statusa notifikacije nije zadan.</value>
+  </data>
+  <data name="NotificationStatusNotProvided" xml:space="preserve">
+    <value>Status notifikacije nije zadan.</value>
+  </data>
+  <data name="NotificationStatusWithIdDoesNotExists" xml:space="preserve">
+    <value>Status notifikacije sa datim ID-em ne postoji.</value>
+  </data>
+  <data name="SmsInvalidFromPhoneNumberFormat" xml:space="preserve">
+    <value>Nevažeći fromat telefonskog broja pošiljaoca.</value>
+  </data>
+  <data name="SmsInvalidId" xml:space="preserve">
+    <value>Nevažeći SMS ID.</value>
+  </data>
+  <data name="SmsInvalidNotificationId" xml:space="preserve">
+    <value>Nevažeći ID notifikacije.</value>
+  </data>
+  <data name="SmsInvalidPhoneNumberFormat" xml:space="preserve">
+    <value>Nevažeći fromat telefonskog broja.</value>
+  </data>
+  <data name="SmsNotificationWithIdDoesNotExists" xml:space="preserve">
+    <value>Notifikacija sa zadanim ID-em ne postoji.</value>
+  </data>
+  <data name="SmsNotProvided" xml:space="preserve">
+    <value>SMS nije zadan.</value>
+  </data>
+  <data name="SmsWithIdDoesNotExists" xml:space="preserve">
+    <value>SMS sa datim ID-em ne postoji.</value>
+  </data>
+  <data name="NotificationTypeCodeEmpty" xml:space="preserve">
+    <value>Kod za tip notifikacije nije obezbjeđen.</value>
+  </data>
+  <data name="NotificationTypeNameEmpty" xml:space="preserve">
+    <value>Naziv za tip notifikacije nije obezbjeđen.</value>
+  </data>
+  <data name="NotificationTypeNotProvided" xml:space="preserve">
+    <value>Detalji potrebni za tip notifikacije nisu obezbjeđeni.</value>
+  </data>
+  <data name="WebNotificationDateSeenEmpty" xml:space="preserve">
+    <value>Vrijeme kad je web notifikacija pogledana nije obezbjeđeno.</value>
+  </data>
+  <data name="WebNotificationIdInvalid" xml:space="preserve">
+    <value>Obezbjeđeni ID za web notifikaciju nije valdian.</value>
+  </data>
+  <data name="WebNotificationNotificationIdInvalid" xml:space="preserve">
+    <value>Obezbjeđeni ID notifikacije za web notifikaciju nije validan.</value>
+  </data>
+  <data name="WebNotificationNotProvided" xml:space="preserve">
+    <value>Detalji potrebni za web notifikaciju nisu obezbjeđeni.</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Objekat obrisan.</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Objekat ažuriran.</value>
+  </data>
+  <data name="WebNotificationWithIdDoesNotExist1" xml:space="preserve">
+    <value>Web notifikacija sa obezbjeđenim ID-em ne postoji.</value>
+  </data>
+  <data name="AttachmentFileNotProvided" xml:space="preserve">
+    <value>Parametar fajl nije zadan.</value>
+  </data>
+  <data name="AttachmentNotProvided" xml:space="preserve">
+    <value>Priložak nije zadan</value>
+  </data>
+  <data name="EmailRecipientTypeCodeEmpty" xml:space="preserve">
+    <value>Kod tipa primaoca emaila ne može biti prazan.</value>
+  </data>
+  <data name="NotificationTypeCodeExists" xml:space="preserve">
+    <value>U bazi postoji tip notifikacije sa istim kodom.</value>
+  </data>
+  <data name="NotificationIdNotProvided" xml:space="preserve">
+    <value>ID notifikacije nije obezbjeđen.</value>
+  </data>
+  <data name="NotificationUserIdInvalid" xml:space="preserve">
+    <value>Obezbjeđeni ID nije validan.</value>
+  </data>
+  <data name="NotificationUserNotProvided" xml:space="preserve">
+    <value>NotificationUser nije obezbjeđen.</value>
+  </data>
+  <data name="NotificationUserWithIdDoesNotExist" xml:space="preserve">
+    <value>Obezbijeđeni ID ne postoji.</value>
+  </data>
+  <data name="TenantIdInvalid" xml:space="preserve">
+    <value>Obezbjeđeni tenant ID nije valdian.</value>
+  </data>
+  <data name="TenantIdNotProvided" xml:space="preserve">
+    <value>Tenant ID nije obezbjeđen.</value>
+  </data>
+  <data name="UserIdInvalid" xml:space="preserve">
+    <value>Obezbjeđeni ID za korisnika nije valdian.</value>
+  </data>
+  <data name="UserIdNotProvided" xml:space="preserve">
+    <value>ID korisnika nije obezbjeđen.</value>
+  </data>
+  <data name="UserWithIdDoesNotExist" xml:space="preserve">
+    <value>Korisnik sa datim ID-em ne postoji.</value>
+  </data>
+  <data name="UserWithTenantIdDoesNotExist" xml:space="preserve">
+    <value>Korisnik sa datim tenant ID-em ne postoji.</value>
+  </data>
+  <data name="EmailMessageSent" xml:space="preserve">
+    <value>Email poruka je uspješno poslata.</value>
+  </data>
+  <data name="WebNotificationUserDoesNotExist" xml:space="preserve">
+    <value>Korisnik sa datim ID-em za web notifikaciju ne postoji.</value>
+  </data>
+  <data name="WebNotificationUserInfoIdInvalid" xml:space="preserve">
+    <value>ID korisnika za web notifikaciju nije validan.</value>
+  </data>
+  <data name="NotificationStatusWCodeAlreadyExists" xml:space="preserve">
+    <value>Status notifikacije sa datim kodom postoji.</value>
+  </data>
+  <data name="EmailMessageInvalidFromFormat" xml:space="preserve">
+    <value>Nevažeći format e-mail-a pošiljaoca.</value>
+  </data>
+  <data name="EmailMessageInvalidNotificationId" xml:space="preserve">
+    <value>Nevažeći ID notifikacije.</value>
+  </data>
+  <data name="EmailMessageNotificationWithIdDoesNotExists" xml:space="preserve">
+    <value>Notifikacija sa IDem ne postoji.</value>
+  </data>
+  <data name="EmailMessageNotProvided" xml:space="preserve">
+    <value>Email poruka nije zadana.</value>
+  </data>
+  <data name="EmailMessageIdInvalidFormat" xml:space="preserve">
+    <value>Nevažeći ID e-mail poruke.</value>
+  </data>
+</root>

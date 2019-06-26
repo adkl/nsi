@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8a4717f11d0049fcb8a448d37b01d08d" Name="Diagram1">
+        <EntityTypeShape EntityType="NsiEntities.ApplicationLog" Width="1.5" PointX="5.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.Language" Width="1.5" PointX="0.75" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.ManipulationLog" Width="1.5" PointX="3.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.Module" Width="1.5" PointX="1.5" PointY="8.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.ModuleLanguage" Width="1.5" PointX="3" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.Permission" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.PermissionLanguage" Width="1.5" PointX="3" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.Role" Width="1.5" PointX="6" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.RoleMember" Width="1.5" PointX="8.25" PointY="4.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.RolePermission" Width="1.5" PointX="8.25" PointY="0.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.ScriptHistory" Width="1.5" PointX="7.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="NsiEntities.User" Width="1.5" PointX="6" PointY="4.25" IsExpanded="true" />
+        <AssociationConnector Association="NsiEntities.Fk_Language_ModuleLanguage_LanguageId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_Language_PermissionLanguage_LanguageId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_Language_User_LanguageId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_ManipulationLog_Role_ManipulationLogId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_ManipulationLog_User_ManipulationLogId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_Module_ModuleLanguage_ModuleId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_Module_Permission_ModuleId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_Permission_PermissionLanguage_PermissionId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_Permission_RolePermission_PermissionId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_Role_RoleMember_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_Role_RolePermission_RoleId" ManuallyRouted="false" />
+        <AssociationConnector Association="NsiEntities.Fk_User_RoleMember_UserId" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

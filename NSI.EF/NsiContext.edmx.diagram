@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="8a4717f11d0049fcb8a448d37b01d08d" Name="Diagram1" ZoomLevel="106">
+        <EntityTypeShape EntityType="NsiEntities.Action" Width="1.5" PointX="0.75" PointY="38.375" />
+        <EntityTypeShape EntityType="NsiEntities.ActionParameter" Width="1.5" PointX="13.75" PointY="42" />
+        <EntityTypeShape EntityType="NsiEntities.ActionParameterType" Width="1.5" PointX="11.5" PointY="42.25" />
+        <EntityTypeShape EntityType="NsiEntities.ApplicationLog" Width="1.5" PointX="0.75" PointY="4.75" />
+        <EntityTypeShape EntityType="NsiEntities.Attachment" Width="1.5" PointX="0.75" PointY="17.625" />
+        <EntityTypeShape EntityType="NsiEntities.Base" Width="1.5" PointX="5.25" PointY="29.875" />
+        <EntityTypeShape EntityType="NsiEntities.Device" Width="1.5" PointX="7.5" PointY="36" />
+        <EntityTypeShape EntityType="NsiEntities.DevicePing" Width="1.5" PointX="9.75" PointY="38.125" />
+        <EntityTypeShape EntityType="NsiEntities.DevicePropertyValue" Width="1.5" PointX="15" PointY="38.125" />
+        <EntityTypeShape EntityType="NsiEntities.DeviceStatus" Width="1.5" PointX="5.25" PointY="45.875" />
+        <EntityTypeShape EntityType="NsiEntities.DeviceType" Width="1.5" PointX="3" PointY="38.375" />
+        <EntityTypeShape EntityType="NsiEntities.Document" Width="1.5" PointX="10" PointY="5" />
+        <EntityTypeShape EntityType="NsiEntities.DocumentType" Width="1.5" PointX="5.25" PointY="5.375" />
+        <EntityTypeShape EntityType="NsiEntities.EmailMessage" Width="1.5" PointX="5.25" PointY="12.375" />
+        <EntityTypeShape EntityType="NsiEntities.EmailRecipient" Width="1.5" PointX="7.5" PointY="12.25" />
+        <EntityTypeShape EntityType="NsiEntities.EmailRecipientType" Width="1.5" PointX="5.25" PointY="38.375" />
+        <EntityTypeShape EntityType="NsiEntities.FakePingConfiguration" Width="1.5" PointX="9.75" PointY="56.5" />
+        <EntityTypeShape EntityType="NsiEntities.FileType" Width="1.5" PointX="7.75" PointY="5.5" />
+        <EntityTypeShape EntityType="NsiEntities.Folder" Width="1.5" PointX="0.75" PointY="1.5" />
+        <EntityTypeShape EntityType="NsiEntities.GeneratedDocument" Width="1.5" PointX="7.5" PointY="1" />
+        <EntityTypeShape EntityType="NsiEntities.Incident" Width="1.5" PointX="10.75" PointY="28.75" />
+        <EntityTypeShape EntityType="NsiEntities.IncidentSettlement" Width="1.5" PointX="8.25" PointY="29" />
+        <EntityTypeShape EntityType="NsiEntities.IncidentStatus" Width="1.5" PointX="6" PointY="18.5" />
+        <EntityTypeShape EntityType="NsiEntities.IncidentType" Width="1.5" PointX="8.5" PointY="22.75" />
+        <EntityTypeShape EntityType="NsiEntities.Language" Width="1.5" PointX="0.75" PointY="27.125" />
+        <EntityTypeShape EntityType="NsiEntities.Module" Width="1.5" PointX="3" PointY="34.5" />
+        <EntityTypeShape EntityType="NsiEntities.Notification" Width="1.5" PointX="3" PointY="14.125" />
+        <EntityTypeShape EntityType="NsiEntities.NotificationStatus" Width="1.5" PointX="0.75" PointY="12.625" />
+        <EntityTypeShape EntityType="NsiEntities.NotificationType" Width="1.5" PointX="0.75" PointY="15.125" />
+        <EntityTypeShape EntityType="NsiEntities.Permission" Width="1.5" PointX="5.25" PointY="54" />
+        <EntityTypeShape EntityType="NsiEntities.Priority" Width="1.5" PointX="8.5" PointY="25.625" />
+        <EntityTypeShape EntityType="NsiEntities.Property" Width="1.5" PointX="5.25" PointY="34" />
+        <EntityTypeShape EntityType="NsiEntities.Role" Width="1.5" PointX="5.25" PointY="49.875" />
+        <EntityTypeShape EntityType="NsiEntities.RoleMember" Width="1.5" PointX="10.5" PointY="34.5" />
+        <EntityTypeShape EntityType="NsiEntities.RolePermission" Width="1.5" PointX="7.5" PointY="49.875" />
+        <EntityTypeShape EntityType="NsiEntities.Rule" Width="1.5" PointX="11.5" PointY="24" />
+        <EntityTypeShape EntityType="NsiEntities.RuleAction" Width="1.5" PointX="12.75" PointY="34.75" />
+        <EntityTypeShape EntityType="NsiEntities.RuleActionParameter" Width="1.5" PointX="16" PointY="33.625" />
+        <EntityTypeShape EntityType="NsiEntities.RuleCondition" Width="1.5" PointX="13.75" PointY="29.625" />
+        <EntityTypeShape EntityType="NsiEntities.ScriptHistory" Width="1.5" PointX="0.75" PointY="6.75" />
+        <EntityTypeShape EntityType="NsiEntities.Sms" Width="1.5" PointX="5.25" PointY="15" />
+        <EntityTypeShape EntityType="NsiEntities.StorageType" Width="1.5" PointX="7.75" PointY="8.5" />
+        <EntityTypeShape EntityType="NsiEntities.Template" Width="1.5" PointX="3" PointY="1.125" />
+        <EntityTypeShape EntityType="NsiEntities.TemplateVersion" Width="1.5" PointX="5.25" PointY="1.375" />
+        <EntityTypeShape EntityType="NsiEntities.Tenant" Width="1.5" PointX="3" PointY="28.125" />
+        <EntityTypeShape EntityType="NsiEntities.TenantModule" Width="1.5" PointX="5.25" PointY="26.625" />
+        <EntityTypeShape EntityType="NsiEntities.UserInfo" Width="1.5" PointX="3" PointY="21.125" />
+        <EntityTypeShape EntityType="NsiEntities.WebNotification" Width="1.5" PointX="5.25" PointY="8.75" />
+        <EntityTypeShape EntityType="NsiEntities.WorkOrder" Width="1.5" PointX="16" PointY="29.375" />
+        <AssociationConnector Association="NsiEntities.Fk_Action_ActionParameter_ActionId" />
+        <AssociationConnector Association="NsiEntities.Fk_Action_DevicePing_ActionId" />
+        <AssociationConnector Association="NsiEntities.Fk_Action_RuleAction_ActionId" />
+        <AssociationConnector Association="NsiEntities.Fk_ActionParameter_RuleActionParameter_ActionParameterId" />
+        <AssociationConnector Association="NsiEntities.Fk_ActionParameterType_ActionParameter_ActionParameterTypeId" />
+        <AssociationConnector Association="NsiEntities.FK_Tenant_Base_TenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_Device_DevicePing_DeviceId" />
+        <AssociationConnector Association="NsiEntities.Fk_Device_DevicePropertyValue_DeviceId" />
+        <AssociationConnector Association="NsiEntities.Fk_Device_FakePingConfiguration_DeviceId" />
+        <AssociationConnector Association="NsiEntities.Fk_Device_Incident_DeviceId" />
+        <AssociationConnector Association="NsiEntities.Fk_Device_RuleAction_DeviceId" />
+        <AssociationConnector Association="NsiEntities.Fk_Device_RuleCondition_DeviceId" />
+        <AssociationConnector Association="NsiEntities.Fk_DeviceStatus_Device_DeviceStatusId" />
+        <AssociationConnector Association="NsiEntities.Fk_DeviceType_Device_DeviceTypeId" />
+        <AssociationConnector Association="NsiEntities.FK_Tenant_Device_TenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_DevicePing_DevicePropertyValue_DevicePingId" />
+        <AssociationConnector Association="NsiEntities.Fk_Rule_DevicePing_RuleId" />
+        <AssociationConnector Association="NsiEntities.Fk_Property_DevicePropertyValue_PropertyId" />
+        <AssociationConnector Association="NsiEntities.FK_Tenant_DeviceStatus_TenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_FileType_Document_FileTypeId" />
+        <AssociationConnector Association="NsiEntities.Fk_StorageType_Document_StorageTypeId" />
+        <AssociationConnector Association="NsiEntities.Fk_DocumentType_GeneratedDocument_DocumentTypeId" />
+        <AssociationConnector Association="NsiEntities.Fk_EmailMessage_EmailRecipient_EmaiMessagelId" />
+        <AssociationConnector Association="NsiEntities.Fk_Notification_EmailMessage_NotificationId" />
+        <AssociationConnector Association="NsiEntities.Fk_EmailRecipientType_EmailRecipient_EmailRecipientTypeId" />
+        <AssociationConnector Association="NsiEntities.Fk_Folder_Template_FolderId" />
+        <AssociationConnector Association="NsiEntities.Fk_TemplateVersion_GeneratedDocument_TemplateVersionId" />
+        <AssociationConnector Association="NsiEntities.Fk_Incident_WorkOrder_IncidentId" />
+        <AssociationConnector Association="NsiEntities.Fk_IncidentStatus_Incident_IncidentStatusId" />
+        <AssociationConnector Association="NsiEntities.Fk_IncidentType_Incident_IncidentTypeId" />
+        <AssociationConnector Association="NsiEntities.Fk_Priority_Incident_PriorityId" />
+        <AssociationConnector Association="NsiEntities.FK_Tenant_Incident_TenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_UserInfo_Incident_AssigneeIdTenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_UserInfo_Incident_ReporterIdTenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_IncidentSettlement_WorkOrder_IncidentSettlementId" />
+        <AssociationConnector Association="NsiEntities.Fk_IncidentStatus_IncidentSettlement_IncidentStatusId" />
+        <AssociationConnector Association="NsiEntities.FK_Tenant_IncidentSettlement_TenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_Language_Tenant_LanguageId" />
+        <AssociationConnector Association="NsiEntities.Fk_Language_UserInfo_LanguageId" />
+        <AssociationConnector Association="NsiEntities.Fk_Module_Permission_ModuleId" />
+        <AssociationConnector Association="NsiEntities.Fk_Module_TenantModule_ModuleId" />
+        <AssociationConnector Association="NsiEntities.Fk_Notification_Sms_NotificationId" />
+        <AssociationConnector Association="NsiEntities.Fk_Notification_WebNotification_NotificationId" />
+        <AssociationConnector Association="NsiEntities.Fk_NotificationStatus_Notification_NotificationStatusId" />
+        <AssociationConnector Association="NsiEntities.Fk_NotificationType_Notification_NotificationTypeId" />
+        <AssociationConnector Association="NsiEntities.Fk_Permission_RolePermission_PermissionId" />
+        <AssociationConnector Association="NsiEntities.Fk_Property_RuleCondition_PropertyId" />
+        <AssociationConnector Association="NsiEntities.FK_Tenant_Property_TenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_Role_RoleMember_RoleIdTenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_Role_RolePermission_RoleIdTenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_Tenant_Role_TenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_Tenant_RoleMember_TenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_UserInfo_RoleMember_UserInfoIdTenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_Rule_RuleAction_RuleId" />
+        <AssociationConnector Association="NsiEntities.Fk_Rule_RuleCondition_RuleId" />
+        <AssociationConnector Association="NsiEntities.Fk_RuleAction_RuleActionParameter_RuleActionId" />
+        <AssociationConnector Association="NsiEntities.FK_Tenant_RuleAction_TenantId" />
+        <AssociationConnector Association="NsiEntities.FK_Tenant_RuleActionParameter_TenantId" />
+        <AssociationConnector Association="NsiEntities.FK_Tenant_RuleCondition_TenantId" />
+        <AssociationConnector Association="NsiEntities.Fk_Template_TemplateVersion_TemplateId" />
+        <AssociationConnector Association="NsiEntities.Fk_Tenant_TenantModule_TenantId" />
+        <AssociationConnector Association="NsiEntities.FK_Tenant_WorkOrder_TenantId" />
+        <AssociationConnector Association="NsiEntities.DeviceTypeAction" />
+        <AssociationConnector Association="NsiEntities.DeviceTypeProperty" />
+        <AssociationConnector Association="NsiEntities.NotificationAttachment" />
+        <AssociationConnector Association="NsiEntities.FK_Folder_ParentFolder" />
+        <EntityTypeShape EntityType="NsiEntities.NotificationUser" Width="1.5" PointX="5.25" PointY="22.375" />
+        <AssociationConnector Association="NsiEntities.FK_NotificationUser_Notification_NotificationId" />
+        <AssociationConnector Association="NsiEntities.FK_NotificationUser_UserInfo_UserId" />
+        <AssociationConnector Association="NsiEntities.FK_WebNotification_UserInfo" />
+        <EntityTypeShape EntityType="NsiEntities.C__RefactorLog" Width="1.5" PointX="0.75" PointY="9.75" />
+        <EntityTypeShape EntityType="NsiEntities.Log" Width="1.5" PointX="10.75" PointY="0.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

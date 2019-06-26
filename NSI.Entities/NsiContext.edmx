@@ -1,0 +1,831 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="NsiContext.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012.Azure" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="ApplicationLog">
+          <Key>
+            <PropertyRef Name="ApplicationLogId" />
+          </Key>
+          <Property Name="ApplicationLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="LanguageId" />
+          </Key>
+          <Property Name="LanguageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="30" Nullable="false" />
+          <Property Name="ISOCode" Type="nvarchar" MaxLength="4" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ManipulationLog">
+          <Key>
+            <PropertyRef Name="ManipulationLogId" />
+          </Key>
+          <Property Name="ManipulationLogId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="DateCreated" Type="datetimeoffset" Precision="7" Nullable="false" />
+          <Property Name="DateModified" Type="datetimeoffset" Precision="7" />
+          <Property Name="CreatedByUserId" Type="int" Nullable="false" />
+          <Property Name="ModifiedByUserId" Type="int" />
+        </EntityType>
+        <EntityType Name="Module">
+          <Key>
+            <PropertyRef Name="ModuleId" />
+          </Key>
+          <Property Name="ModuleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="IsActive" Type="int" />
+        </EntityType>
+        <EntityType Name="ModuleLanguage">
+          <Key>
+            <PropertyRef Name="ModuleLanguageId" />
+            <PropertyRef Name="LanguageId" />
+            <PropertyRef Name="ModuleId" />
+          </Key>
+          <Property Name="ModuleLanguageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="LanguageId" Type="int" Nullable="false" />
+          <Property Name="ModuleId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="PermissionId" />
+          </Key>
+          <Property Name="PermissionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Code" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="ModuleId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="PermissionLanguage">
+          <Key>
+            <PropertyRef Name="PermissionLanguageId" />
+            <PropertyRef Name="PermissionId" />
+            <PropertyRef Name="LanguageId" />
+          </Key>
+          <Property Name="PermissionLanguageId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="PermissionId" Type="int" Nullable="false" />
+          <Property Name="LanguageId" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="ManipulationLogId" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RoleMember">
+          <Key>
+            <PropertyRef Name="RoleMemberId" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="IsActive" />
+          </Key>
+          <Property Name="RoleMemberId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="int" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="RolePermission">
+          <Key>
+            <PropertyRef Name="RolePermissionId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="PermissionId" />
+            <PropertyRef Name="IsActive" />
+          </Key>
+          <Property Name="RolePermissionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="PermissionId" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="ScriptHistory">
+          <Key>
+            <PropertyRef Name="Identifier" />
+          </Key>
+          <Property Name="Identifier" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="DateExecuted" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="MiddleName" Type="nvarchar" MaxLength="20" />
+          <Property Name="TimezoneId" Type="nvarchar" MaxLength="64" />
+          <Property Name="Email" Type="nvarchar" MaxLength="240" Nullable="false" />
+          <Property Name="IsActive" Type="bit" Nullable="false" />
+          <Property Name="IsDeleted" Type="bit" Nullable="false" />
+          <Property Name="LanguageId" Type="int" Nullable="false" />
+          <Property Name="ManipulationLogId" Type="int" Nullable="false" />
+        </EntityType>
+        <Association Name="Fk_Language_ModuleLanguage_LanguageId">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="ModuleLanguage" Type="Self.ModuleLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="ModuleLanguage">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Language_PermissionLanguage_LanguageId">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="PermissionLanguage" Type="Self.PermissionLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="PermissionLanguage">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Language_User_LanguageId">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ManipulationLog_Role_ManipulationLogId">
+          <End Role="ManipulationLog" Type="Self.ManipulationLog" Multiplicity="1" />
+          <End Role="Role" Type="Self.Role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManipulationLog">
+              <PropertyRef Name="ManipulationLogId" />
+            </Principal>
+            <Dependent Role="Role">
+              <PropertyRef Name="ManipulationLogId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ManipulationLog_User_ManipulationLogId">
+          <End Role="ManipulationLog" Type="Self.ManipulationLog" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManipulationLog">
+              <PropertyRef Name="ManipulationLogId" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="ManipulationLogId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Module_ModuleLanguage_ModuleId">
+          <End Role="Module" Type="Self.Module" Multiplicity="1" />
+          <End Role="ModuleLanguage" Type="Self.ModuleLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Module">
+              <PropertyRef Name="ModuleId" />
+            </Principal>
+            <Dependent Role="ModuleLanguage">
+              <PropertyRef Name="ModuleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Module_Permission_ModuleId">
+          <End Role="Module" Type="Self.Module" Multiplicity="1" />
+          <End Role="Permission" Type="Self.Permission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Module">
+              <PropertyRef Name="ModuleId" />
+            </Principal>
+            <Dependent Role="Permission">
+              <PropertyRef Name="ModuleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Permission_PermissionLanguage_PermissionId">
+          <End Role="Permission" Type="Self.Permission" Multiplicity="1" />
+          <End Role="PermissionLanguage" Type="Self.PermissionLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="PermissionId" />
+            </Principal>
+            <Dependent Role="PermissionLanguage">
+              <PropertyRef Name="PermissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Permission_RolePermission_PermissionId">
+          <End Role="Permission" Type="Self.Permission" Multiplicity="1" />
+          <End Role="RolePermission" Type="Self.RolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="PermissionId" />
+            </Principal>
+            <Dependent Role="RolePermission">
+              <PropertyRef Name="PermissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Role_RoleMember_RoleId">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="RoleMember" Type="Self.RoleMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="RoleMember">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Role_RolePermission_RoleId">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="RolePermission" Type="Self.RolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="RolePermission">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_User_RoleMember_UserId">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="RoleMember" Type="Self.RoleMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="RoleMember">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NsiContextStoreContainer">
+          <EntitySet Name="ApplicationLog" EntityType="Self.ApplicationLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Language" EntityType="Self.Language" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ManipulationLog" EntityType="Self.ManipulationLog" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Module" EntityType="Self.Module" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ModuleLanguage" EntityType="Self.ModuleLanguage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Permission" EntityType="Self.Permission" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PermissionLanguage" EntityType="Self.PermissionLanguage" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RoleMember" EntityType="Self.RoleMember" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="RolePermission" EntityType="Self.RolePermission" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ScriptHistory" EntityType="Self.ScriptHistory" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="Fk_Language_ModuleLanguage_LanguageId" Association="Self.Fk_Language_ModuleLanguage_LanguageId">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="ModuleLanguage" EntitySet="ModuleLanguage" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Language_PermissionLanguage_LanguageId" Association="Self.Fk_Language_PermissionLanguage_LanguageId">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="PermissionLanguage" EntitySet="PermissionLanguage" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Language_User_LanguageId" Association="Self.Fk_Language_User_LanguageId">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ManipulationLog_Role_ManipulationLogId" Association="Self.Fk_ManipulationLog_Role_ManipulationLogId">
+            <End Role="ManipulationLog" EntitySet="ManipulationLog" />
+            <End Role="Role" EntitySet="Role" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ManipulationLog_User_ManipulationLogId" Association="Self.Fk_ManipulationLog_User_ManipulationLogId">
+            <End Role="ManipulationLog" EntitySet="ManipulationLog" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Module_ModuleLanguage_ModuleId" Association="Self.Fk_Module_ModuleLanguage_ModuleId">
+            <End Role="Module" EntitySet="Module" />
+            <End Role="ModuleLanguage" EntitySet="ModuleLanguage" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Module_Permission_ModuleId" Association="Self.Fk_Module_Permission_ModuleId">
+            <End Role="Module" EntitySet="Module" />
+            <End Role="Permission" EntitySet="Permission" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Permission_PermissionLanguage_PermissionId" Association="Self.Fk_Permission_PermissionLanguage_PermissionId">
+            <End Role="Permission" EntitySet="Permission" />
+            <End Role="PermissionLanguage" EntitySet="PermissionLanguage" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Permission_RolePermission_PermissionId" Association="Self.Fk_Permission_RolePermission_PermissionId">
+            <End Role="Permission" EntitySet="Permission" />
+            <End Role="RolePermission" EntitySet="RolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Role_RoleMember_RoleId" Association="Self.Fk_Role_RoleMember_RoleId">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="RoleMember" EntitySet="RoleMember" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Role_RolePermission_RoleId" Association="Self.Fk_Role_RolePermission_RoleId">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="RolePermission" EntitySet="RolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_User_RoleMember_UserId" Association="Self.Fk_User_RoleMember_UserId">
+            <End Role="User" EntitySet="User" />
+            <End Role="RoleMember" EntitySet="RoleMember" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="NsiEntities" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="ApplicationLog">
+          <Key>
+            <PropertyRef Name="ApplicationLogId" />
+          </Key>
+          <Property Name="ApplicationLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+        </EntityType>
+        <EntityType Name="Language">
+          <Key>
+            <PropertyRef Name="LanguageId" />
+          </Key>
+          <Property Name="LanguageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="30" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ISOCode" Type="String" MaxLength="4" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="ModuleLanguage" Relationship="Self.Fk_Language_ModuleLanguage_LanguageId" FromRole="Language" ToRole="ModuleLanguage" />
+          <NavigationProperty Name="PermissionLanguage" Relationship="Self.Fk_Language_PermissionLanguage_LanguageId" FromRole="Language" ToRole="PermissionLanguage" />
+          <NavigationProperty Name="User" Relationship="Self.Fk_Language_User_LanguageId" FromRole="Language" ToRole="User" />
+        </EntityType>
+        <EntityType Name="ManipulationLog">
+          <Key>
+            <PropertyRef Name="ManipulationLogId" />
+          </Key>
+          <Property Name="ManipulationLogId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="DateCreated" Type="DateTimeOffset" Nullable="false" Precision="7" />
+          <Property Name="DateModified" Type="DateTimeOffset" Precision="7" />
+          <Property Name="CreatedByUserId" Type="Int32" Nullable="false" />
+          <Property Name="ModifiedByUserId" Type="Int32" />
+          <NavigationProperty Name="Role" Relationship="Self.Fk_ManipulationLog_Role_ManipulationLogId" FromRole="ManipulationLog" ToRole="Role" />
+          <NavigationProperty Name="User" Relationship="Self.Fk_ManipulationLog_User_ManipulationLogId" FromRole="ManipulationLog" ToRole="User" />
+        </EntityType>
+        <EntityType Name="Module">
+          <Key>
+            <PropertyRef Name="ModuleId" />
+          </Key>
+          <Property Name="ModuleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="IsActive" Type="Int32" />
+          <NavigationProperty Name="ModuleLanguage" Relationship="Self.Fk_Module_ModuleLanguage_ModuleId" FromRole="Module" ToRole="ModuleLanguage" />
+          <NavigationProperty Name="Permission" Relationship="Self.Fk_Module_Permission_ModuleId" FromRole="Module" ToRole="Permission" />
+        </EntityType>
+        <EntityType Name="ModuleLanguage">
+          <Key>
+            <PropertyRef Name="ModuleLanguageId" />
+            <PropertyRef Name="LanguageId" />
+            <PropertyRef Name="ModuleId" />
+          </Key>
+          <Property Name="ModuleLanguageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="LanguageId" Type="Int32" Nullable="false" />
+          <Property Name="ModuleId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Language" Relationship="Self.Fk_Language_ModuleLanguage_LanguageId" FromRole="ModuleLanguage" ToRole="Language" />
+          <NavigationProperty Name="Module" Relationship="Self.Fk_Module_ModuleLanguage_ModuleId" FromRole="ModuleLanguage" ToRole="Module" />
+        </EntityType>
+        <EntityType Name="Permission">
+          <Key>
+            <PropertyRef Name="PermissionId" />
+          </Key>
+          <Property Name="PermissionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Code" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="ModuleId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Module" Relationship="Self.Fk_Module_Permission_ModuleId" FromRole="Permission" ToRole="Module" />
+          <NavigationProperty Name="PermissionLanguage" Relationship="Self.Fk_Permission_PermissionLanguage_PermissionId" FromRole="Permission" ToRole="PermissionLanguage" />
+          <NavigationProperty Name="RolePermission" Relationship="Self.Fk_Permission_RolePermission_PermissionId" FromRole="Permission" ToRole="RolePermission" />
+        </EntityType>
+        <EntityType Name="PermissionLanguage">
+          <Key>
+            <PropertyRef Name="PermissionLanguageId" />
+            <PropertyRef Name="PermissionId" />
+            <PropertyRef Name="LanguageId" />
+          </Key>
+          <Property Name="PermissionLanguageId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="PermissionId" Type="Int32" Nullable="false" />
+          <Property Name="LanguageId" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="Language" Relationship="Self.Fk_Language_PermissionLanguage_LanguageId" FromRole="PermissionLanguage" ToRole="Language" />
+          <NavigationProperty Name="Permission" Relationship="Self.Fk_Permission_PermissionLanguage_PermissionId" FromRole="PermissionLanguage" ToRole="Permission" />
+        </EntityType>
+        <EntityType Name="Role">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="ManipulationLogId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="ManipulationLog" Relationship="Self.Fk_ManipulationLog_Role_ManipulationLogId" FromRole="Role" ToRole="ManipulationLog" />
+          <NavigationProperty Name="RoleMember" Relationship="Self.Fk_Role_RoleMember_RoleId" FromRole="Role" ToRole="RoleMember" />
+          <NavigationProperty Name="RolePermission" Relationship="Self.Fk_Role_RolePermission_RoleId" FromRole="Role" ToRole="RolePermission" />
+        </EntityType>
+        <EntityType Name="RoleMember">
+          <Key>
+            <PropertyRef Name="RoleMemberId" />
+            <PropertyRef Name="UserId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="IsActive" />
+          </Key>
+          <Property Name="RoleMemberId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Int32" Nullable="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Role" Relationship="Self.Fk_Role_RoleMember_RoleId" FromRole="RoleMember" ToRole="Role" />
+          <NavigationProperty Name="User" Relationship="Self.Fk_User_RoleMember_UserId" FromRole="RoleMember" ToRole="User" />
+        </EntityType>
+        <EntityType Name="RolePermission">
+          <Key>
+            <PropertyRef Name="RolePermissionId" />
+            <PropertyRef Name="RoleId" />
+            <PropertyRef Name="PermissionId" />
+            <PropertyRef Name="IsActive" />
+          </Key>
+          <Property Name="RolePermissionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="PermissionId" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="Permission" Relationship="Self.Fk_Permission_RolePermission_PermissionId" FromRole="RolePermission" ToRole="Permission" />
+          <NavigationProperty Name="Role" Relationship="Self.Fk_Role_RolePermission_RoleId" FromRole="RolePermission" ToRole="Role" />
+        </EntityType>
+        <EntityType Name="ScriptHistory">
+          <Key>
+            <PropertyRef Name="Identifier" />
+          </Key>
+          <Property Name="Identifier" Type="Guid" Nullable="false" />
+          <Property Name="DateExecuted" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="MiddleName" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="TimezoneId" Type="String" MaxLength="64" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="240" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" Nullable="false" />
+          <Property Name="IsDeleted" Type="Boolean" Nullable="false" />
+          <Property Name="LanguageId" Type="Int32" Nullable="false" />
+          <Property Name="ManipulationLogId" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="Language" Relationship="Self.Fk_Language_User_LanguageId" FromRole="User" ToRole="Language" />
+          <NavigationProperty Name="ManipulationLog" Relationship="Self.Fk_ManipulationLog_User_ManipulationLogId" FromRole="User" ToRole="ManipulationLog" />
+          <NavigationProperty Name="RoleMember" Relationship="Self.Fk_User_RoleMember_UserId" FromRole="User" ToRole="RoleMember" />
+        </EntityType>
+        <Association Name="Fk_Language_ModuleLanguage_LanguageId">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="ModuleLanguage" Type="Self.ModuleLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="ModuleLanguage">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Language_PermissionLanguage_LanguageId">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="PermissionLanguage" Type="Self.PermissionLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="PermissionLanguage">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Language_User_LanguageId">
+          <End Role="Language" Type="Self.Language" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Language">
+              <PropertyRef Name="LanguageId" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="LanguageId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ManipulationLog_Role_ManipulationLogId">
+          <End Role="ManipulationLog" Type="Self.ManipulationLog" Multiplicity="1" />
+          <End Role="Role" Type="Self.Role" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManipulationLog">
+              <PropertyRef Name="ManipulationLogId" />
+            </Principal>
+            <Dependent Role="Role">
+              <PropertyRef Name="ManipulationLogId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_ManipulationLog_User_ManipulationLogId">
+          <End Role="ManipulationLog" Type="Self.ManipulationLog" Multiplicity="1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="ManipulationLog">
+              <PropertyRef Name="ManipulationLogId" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="ManipulationLogId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Module_ModuleLanguage_ModuleId">
+          <End Role="Module" Type="Self.Module" Multiplicity="1" />
+          <End Role="ModuleLanguage" Type="Self.ModuleLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Module">
+              <PropertyRef Name="ModuleId" />
+            </Principal>
+            <Dependent Role="ModuleLanguage">
+              <PropertyRef Name="ModuleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Module_Permission_ModuleId">
+          <End Role="Module" Type="Self.Module" Multiplicity="1" />
+          <End Role="Permission" Type="Self.Permission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Module">
+              <PropertyRef Name="ModuleId" />
+            </Principal>
+            <Dependent Role="Permission">
+              <PropertyRef Name="ModuleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Permission_PermissionLanguage_PermissionId">
+          <End Role="Permission" Type="Self.Permission" Multiplicity="1" />
+          <End Role="PermissionLanguage" Type="Self.PermissionLanguage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="PermissionId" />
+            </Principal>
+            <Dependent Role="PermissionLanguage">
+              <PropertyRef Name="PermissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Permission_RolePermission_PermissionId">
+          <End Role="Permission" Type="Self.Permission" Multiplicity="1" />
+          <End Role="RolePermission" Type="Self.RolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Permission">
+              <PropertyRef Name="PermissionId" />
+            </Principal>
+            <Dependent Role="RolePermission">
+              <PropertyRef Name="PermissionId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Role_RoleMember_RoleId">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="RoleMember" Type="Self.RoleMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="RoleMember">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_Role_RolePermission_RoleId">
+          <End Role="Role" Type="Self.Role" Multiplicity="1" />
+          <End Role="RolePermission" Type="Self.RolePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Role">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="RolePermission">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="Fk_User_RoleMember_UserId">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="RoleMember" Type="Self.RoleMember" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="RoleMember">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="NsiContext" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="ApplicationLog" EntityType="Self.ApplicationLog" />
+          <EntitySet Name="Language" EntityType="Self.Language" />
+          <EntitySet Name="ManipulationLog" EntityType="Self.ManipulationLog" />
+          <EntitySet Name="Module" EntityType="Self.Module" />
+          <EntitySet Name="ModuleLanguage" EntityType="Self.ModuleLanguage" />
+          <EntitySet Name="Permission" EntityType="Self.Permission" />
+          <EntitySet Name="PermissionLanguage" EntityType="Self.PermissionLanguage" />
+          <EntitySet Name="Role" EntityType="Self.Role" />
+          <EntitySet Name="RoleMember" EntityType="Self.RoleMember" />
+          <EntitySet Name="RolePermission" EntityType="Self.RolePermission" />
+          <EntitySet Name="ScriptHistory" EntityType="Self.ScriptHistory" />
+          <EntitySet Name="User" EntityType="Self.User" />
+          <AssociationSet Name="Fk_Language_ModuleLanguage_LanguageId" Association="Self.Fk_Language_ModuleLanguage_LanguageId">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="ModuleLanguage" EntitySet="ModuleLanguage" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Language_PermissionLanguage_LanguageId" Association="Self.Fk_Language_PermissionLanguage_LanguageId">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="PermissionLanguage" EntitySet="PermissionLanguage" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Language_User_LanguageId" Association="Self.Fk_Language_User_LanguageId">
+            <End Role="Language" EntitySet="Language" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ManipulationLog_Role_ManipulationLogId" Association="Self.Fk_ManipulationLog_Role_ManipulationLogId">
+            <End Role="ManipulationLog" EntitySet="ManipulationLog" />
+            <End Role="Role" EntitySet="Role" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_ManipulationLog_User_ManipulationLogId" Association="Self.Fk_ManipulationLog_User_ManipulationLogId">
+            <End Role="ManipulationLog" EntitySet="ManipulationLog" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Module_ModuleLanguage_ModuleId" Association="Self.Fk_Module_ModuleLanguage_ModuleId">
+            <End Role="Module" EntitySet="Module" />
+            <End Role="ModuleLanguage" EntitySet="ModuleLanguage" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Module_Permission_ModuleId" Association="Self.Fk_Module_Permission_ModuleId">
+            <End Role="Module" EntitySet="Module" />
+            <End Role="Permission" EntitySet="Permission" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Permission_PermissionLanguage_PermissionId" Association="Self.Fk_Permission_PermissionLanguage_PermissionId">
+            <End Role="Permission" EntitySet="Permission" />
+            <End Role="PermissionLanguage" EntitySet="PermissionLanguage" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Permission_RolePermission_PermissionId" Association="Self.Fk_Permission_RolePermission_PermissionId">
+            <End Role="Permission" EntitySet="Permission" />
+            <End Role="RolePermission" EntitySet="RolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Role_RoleMember_RoleId" Association="Self.Fk_Role_RoleMember_RoleId">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="RoleMember" EntitySet="RoleMember" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_Role_RolePermission_RoleId" Association="Self.Fk_Role_RolePermission_RoleId">
+            <End Role="Role" EntitySet="Role" />
+            <End Role="RolePermission" EntitySet="RolePermission" />
+          </AssociationSet>
+          <AssociationSet Name="Fk_User_RoleMember_UserId" Association="Self.Fk_User_RoleMember_UserId">
+            <End Role="User" EntitySet="User" />
+            <End Role="RoleMember" EntitySet="RoleMember" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="NsiContextStoreContainer" CdmEntityContainer="NsiContext">
+          <EntitySetMapping Name="ApplicationLog">
+            <EntityTypeMapping TypeName="NsiEntities.ApplicationLog">
+              <MappingFragment StoreEntitySet="ApplicationLog">
+                <ScalarProperty Name="ApplicationLogId" ColumnName="ApplicationLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Language">
+            <EntityTypeMapping TypeName="NsiEntities.Language">
+              <MappingFragment StoreEntitySet="Language">
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ISOCode" ColumnName="ISOCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ManipulationLog">
+            <EntityTypeMapping TypeName="NsiEntities.ManipulationLog">
+              <MappingFragment StoreEntitySet="ManipulationLog">
+                <ScalarProperty Name="ManipulationLogId" ColumnName="ManipulationLogId" />
+                <ScalarProperty Name="DateCreated" ColumnName="DateCreated" />
+                <ScalarProperty Name="DateModified" ColumnName="DateModified" />
+                <ScalarProperty Name="CreatedByUserId" ColumnName="CreatedByUserId" />
+                <ScalarProperty Name="ModifiedByUserId" ColumnName="ModifiedByUserId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Module">
+            <EntityTypeMapping TypeName="NsiEntities.Module">
+              <MappingFragment StoreEntitySet="Module">
+                <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ModuleLanguage">
+            <EntityTypeMapping TypeName="NsiEntities.ModuleLanguage">
+              <MappingFragment StoreEntitySet="ModuleLanguage">
+                <ScalarProperty Name="ModuleLanguageId" ColumnName="ModuleLanguageId" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Permission">
+            <EntityTypeMapping TypeName="NsiEntities.Permission">
+              <MappingFragment StoreEntitySet="Permission">
+                <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+                <ScalarProperty Name="Code" ColumnName="Code" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ModuleId" ColumnName="ModuleId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PermissionLanguage">
+            <EntityTypeMapping TypeName="NsiEntities.PermissionLanguage">
+              <MappingFragment StoreEntitySet="PermissionLanguage">
+                <ScalarProperty Name="PermissionLanguageId" ColumnName="PermissionLanguageId" />
+                <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Role">
+            <EntityTypeMapping TypeName="NsiEntities.Role">
+              <MappingFragment StoreEntitySet="Role">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="ManipulationLogId" ColumnName="ManipulationLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RoleMember">
+            <EntityTypeMapping TypeName="NsiEntities.RoleMember">
+              <MappingFragment StoreEntitySet="RoleMember">
+                <ScalarProperty Name="RoleMemberId" ColumnName="RoleMemberId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="RolePermission">
+            <EntityTypeMapping TypeName="NsiEntities.RolePermission">
+              <MappingFragment StoreEntitySet="RolePermission">
+                <ScalarProperty Name="RolePermissionId" ColumnName="RolePermissionId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="PermissionId" ColumnName="PermissionId" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ScriptHistory">
+            <EntityTypeMapping TypeName="NsiEntities.ScriptHistory">
+              <MappingFragment StoreEntitySet="ScriptHistory">
+                <ScalarProperty Name="Identifier" ColumnName="Identifier" />
+                <ScalarProperty Name="DateExecuted" ColumnName="DateExecuted" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User">
+            <EntityTypeMapping TypeName="NsiEntities.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="MiddleName" ColumnName="MiddleName" />
+                <ScalarProperty Name="TimezoneId" ColumnName="TimezoneId" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsDeleted" ColumnName="IsDeleted" />
+                <ScalarProperty Name="LanguageId" ColumnName="LanguageId" />
+                <ScalarProperty Name="ManipulationLogId" ColumnName="ManipulationLogId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

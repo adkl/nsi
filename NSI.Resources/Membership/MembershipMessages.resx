@@ -1,0 +1,309 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="LanguageIdInvalid" xml:space="preserve">
+    <value>Provided language ID is not valid.</value>
+  </data>
+  <data name="LanguageIsCodeLenghtExceeded" xml:space="preserve">
+    <value>Language ISO code can only have 5 characters maximum.</value>
+  </data>
+  <data name="LanguageISOCodeAlreadyExists" xml:space="preserve">
+    <value>Language with provided ISO code already exists.</value>
+  </data>
+  <data name="LanguageNameLenghtExceeded" xml:space="preserve">
+    <value>Language name can only have 30 characters maximum.</value>
+  </data>
+  <data name="LanguageNotProvided" xml:space="preserve">
+    <value>Language details are not provided.</value>
+  </data>
+  <data name="LanguageWithIdDoesNotExist" xml:space="preserve">
+    <value>Language with provided ID does not exist.</value>
+  </data>
+  <data name="ModuleIdInvalid" xml:space="preserve">
+    <value>Provided module ID is not valid.</value>
+  </data>
+  <data name="ModuleWithIdDoesNotExist" xml:space="preserve">
+    <value>Module wit provided ID does not exist.</value>
+  </data>
+  <data name="PermissionCodeAlreadyExists" xml:space="preserve">
+    <value>Permission with provided code already exists.</value>
+  </data>
+  <data name="PermissionCodeLenghtExceeded" xml:space="preserve">
+    <value>Permission code can only have 100 characters maximum.</value>
+  </data>
+  <data name="PermissionIdInvalid" xml:space="preserve">
+    <value>Provided permission ID is not valid.</value>
+  </data>
+  <data name="PermissionNotProvided" xml:space="preserve">
+    <value>Permission details are not provided.</value>
+  </data>
+  <data name="PermissionWithIdDoesNotExist" xml:space="preserve">
+    <value>Permission with provided ID does not exist.</value>
+  </data>
+  <data name="RoleNameAlreadyExists" xml:space="preserve">
+    <value>Role with provided name already exists.</value>
+  </data>
+  <data name="RoleNameLenghtExceeded" xml:space="preserve">
+    <value>Role name can only hace 50 characters maximum.</value>
+  </data>
+  <data name="RoleNotProvided" xml:space="preserve">
+    <value>Role details are not provided.</value>
+  </data>
+  <data name="UserEmailLengthExceeded" xml:space="preserve">
+    <value>User email can only have 240 characters maximum.</value>
+  </data>
+  <data name="UserFullNameLengthExceeded" xml:space="preserve">
+    <value>User full name can only have 220 characters maximum.</value>
+  </data>
+  <data name="UserIdInvalid" xml:space="preserve">
+    <value>Provided user ID is not valid.</value>
+  </data>
+  <data name="UserNotProvided" xml:space="preserve">
+    <value>User details are not provided. </value>
+  </data>
+  <data name="UserWithIdDoesNotExist" xml:space="preserve">
+    <value>User with provided ID does not exist.</value>
+  </data>
+  <data name="TenantIdentifierAlreadyExists" xml:space="preserve">
+    <value>Tenant wih provided identifier already exist.</value>
+  </data>
+  <data name="TenantIdentifierNotProvided" xml:space="preserve">
+    <value>Tenant identifier is not provided.</value>
+  </data>
+  <data name="TenantIdInvalid" xml:space="preserve">
+    <value>Provided tenant ID is not valid.</value>
+  </data>
+  <data name="TenantNameLengthExceeded" xml:space="preserve">
+    <value>Tenant name can only have 100 characters maximum.</value>
+  </data>
+  <data name="TenantNotProvided" xml:space="preserve">
+    <value>Tenant details are not provided.</value>
+  </data>
+  <data name="TenantWithIdDoesNotExist" xml:space="preserve">
+    <value>Tenant with provided ID does not exist.</value>
+  </data>
+  <data name="ModuleCodeAlreadyExists" xml:space="preserve">
+    <value>Module with provided code already exists.</value>
+  </data>
+  <data name="ModuleCodeLenghtExceeded" xml:space="preserve">
+    <value>Module code can only have 100 characters maximum.</value>
+  </data>
+  <data name="ModuleNameLenghtExceeded" xml:space="preserve">
+    <value>Module name can only have 100 characters maximum.</value>
+  </data>
+  <data name="ModuleNotProvided" xml:space="preserve">
+    <value>Module details are not provided.</value>
+  </data>
+  <data name="LanguageIsoCodeInvalid" xml:space="preserve">
+    <value>Provided language ISO code is not valid.</value>
+  </data>
+  <data name="LanguageNameInvalid" xml:space="preserve">
+    <value>Provided language name is not valid.</value>
+  </data>
+  <data name="TenantNameInvalid" xml:space="preserve">
+    <value>Provided tenant name is not valid.</value>
+  </data>
+  <data name="PermissionCodeInvalid" xml:space="preserve">
+    <value>Provided permision code is not valid.</value>
+  </data>
+  <data name="LanguageIsoCodeNotProvided" xml:space="preserve">
+    <value>Language ISO code is not provided. </value>
+  </data>
+  <data name="LanguageNameNotProvided" xml:space="preserve">
+    <value>Language name is not provided.</value>
+  </data>
+  <data name="RoleManipulationLogIdNotProvided" xml:space="preserve">
+    <value>Role manipulation log ID is not provided.</value>
+  </data>
+  <data name="RoleNameNotProvided" xml:space="preserve">
+    <value>Role name is not provided.</value>
+  </data>
+  <data name="RoleTenantIdDoesNotExist" xml:space="preserve">
+    <value>Provided tenant ID does not exist.</value>
+  </data>
+  <data name="RoleTenantIdNotProvided" xml:space="preserve">
+    <value>Role tenant ID is not provided.</value>
+  </data>
+  <data name="RoleIdInvalid" xml:space="preserve">
+    <value>Provided role ID is not valid.</value>
+  </data>
+  <data name="RoleWithIdDoesNotExist" xml:space="preserve">
+    <value>Role with provided ID does not exist.</value>
+  </data>
+  <data name="ModuleCodeInvalid" xml:space="preserve">
+    <value>Provided module code is not valid.</value>
+  </data>
+  <data name="ModuleNameInvalid" xml:space="preserve">
+    <value>Provided module name is not valid.</value>
+  </data>
+  <data name="UserEmailInvalid" xml:space="preserve">
+    <value>User email is not valid.</value>
+  </data>
+  <data name="UserIdentifierInvalid" xml:space="preserve">
+    <value>User identifier is not valid.</value>
+  </data>
+  <data name="UserIdentifierNotProvided" xml:space="preserve">
+    <value>User identifier is not provided.</value>
+  </data>
+  <data name="UserLastNameNotProvided" xml:space="preserve">
+    <value>User last name is not provided.</value>
+  </data>
+  <data name="UserMiddleNameNotProvided" xml:space="preserve">
+    <value>User middle name is not provided.</value>
+  </data>
+  <data name="UserNameNotProvided" xml:space="preserve">
+    <value>User name is not provided.</value>
+  </data>
+  <data name="UserWithEmailExists" xml:space="preserve">
+    <value>User with email already exist.</value>
+  </data>
+  <data name="RoleMemberAlreadyExist" xml:space="preserve">
+    <value>Role member already exist.</value>
+  </data>
+  <data name="RoleMemberIdInvalid" xml:space="preserve">
+    <value>Role member ID is not valid.</value>
+  </data>
+  <data name="RoleMemberNotProvided" xml:space="preserve">
+    <value>Role member is not provided.</value>
+  </data>
+  <data name="RoleMemberWithIdDoesNotExist" xml:space="preserve">
+    <value>Role Member with provided ID does not exist.</value>
+  </data>
+  <data name="RolePermissionIdInvalid" xml:space="preserve">
+    <value>Role permission with ID is invalid.</value>
+  </data>
+  <data name="UserWithIdentifierExists" xml:space="preserve">
+    <value>User with provided Identifier already exist.</value>
+  </data>
+  <data name="PermissionIdNotProvided" xml:space="preserve">
+    <value>Permission ID is not provided.</value>
+  </data>
+  <data name="RoleIdDoesNotExist" xml:space="preserve">
+    <value>Provided role ID does not exist.</value>
+  </data>
+  <data name="RoleIdNotProvided" xml:space="preserve">
+    <value>Role ID is not provided.</value>
+  </data>
+  <data name="RolePermissionIdDoesNotExist" xml:space="preserve">
+    <value>Role permission with provided ID does not exist. </value>
+  </data>
+  <data name="RolePermissionNotProvided" xml:space="preserve">
+    <value>Role permission is not provided.</value>
+  </data>
+</root>

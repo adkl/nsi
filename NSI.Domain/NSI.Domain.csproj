@@ -1,0 +1,160 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{01C53D26-9736-413C-A247-8612349B66CB}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NSI.Domain</RootNamespace>
+    <AssemblyName>NSI.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azure.Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Storage.0.1.3\lib\net45\Azure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\Microsoft.WindowsAzure.ServiceRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.7.2.1\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandboxable.Microsoft.WindowsAzure.Storage, Version=8.7.0.0, Culture=neutral, PublicKeyToken=dd461fa2f43d8736, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sandboxable.Microsoft.WindowsAzure.Storage.1.1.9\lib\net452\Sandboxable.Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Spatial, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.2\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsAzureEventSource, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\WindowsAzureEventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsAzureTelemetryEvents, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\WindowsAzureTelemetryEvents.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseAuditDomain.cs" />
+    <Compile Include="Base\BaseDomain.cs" />
+    <Compile Include="DeviceManagement\CreateDeviceDomain.cs" />
+    <Compile Include="DeviceManagement\DeviceDomain.cs" />
+    <Compile Include="DeviceManagement\DeviceStatusDomain.cs" />
+    <Compile Include="DeviceManagement\UpdateDeviceDomain.cs" />
+    <Compile Include="DevicePing\DevicePingDomain.cs" />
+    <Compile Include="DevicePing\DevicePropertyValue.cs" />
+    <Compile Include="DevicePing\PingDeviceDomain.cs" />
+    <Compile Include="DocumentManagement\DocumentDomain.cs" />
+    <Compile Include="DocumentManagement\FileTypeDomain.cs" />
+    <Compile Include="DocumentManagement\StorageTypeDomain.cs" />
+    <Compile Include="IncidentManagement\POSTIncidentDomain.cs" />
+    <Compile Include="Document\DocumentTypeDomain.cs" />
+    <Compile Include="Document\GeneratedDocumentDomain.cs" />
+    <Compile Include="IncidentManagement\IncidentPriorityDomain.cs" />
+    <Compile Include="IncidentManagement\IncidentStatusDomain.cs" />
+    <Compile Include="IncidentManagement\IncidentTypeDomain.cs" />
+    <Compile Include="IncidentManagement\IncidentSettlementDomain.cs" />
+    <Compile Include="IncidentManagement\IncidentDomain.cs" />
+    <Compile Include="DeviceManagement\ActionDomain.cs" />
+    <Compile Include="DeviceManagement\DeviceTypeDomain.cs" />
+    <Compile Include="DeviceManagement\PropertyDomain.cs" />
+    <Compile Include="IncidentManagement\IncidentWorkOrderDomain.cs" />
+    <Compile Include="Membership\AuditTrailDomain.cs" />
+    <Compile Include="Membership\LanguageDomain.cs" />
+    <Compile Include="Membership\ModuleDomain.cs" />
+    <Compile Include="Membership\PermissionDomain.cs" />
+    <Compile Include="Membership\RoleDomain.cs" />
+    <Compile Include="Membership\RoleMemberDomain.cs" />
+    <Compile Include="Membership\RolePermissionDomain.cs" />
+    <Compile Include="Membership\TenantDomain.cs" />
+    <Compile Include="Membership\UserDomain.cs" />
+    <Compile Include="Notifications\AttachmentDomain.cs" />
+    <Compile Include="Notifications\EmailMessageDomain.cs" />
+    <Compile Include="Notifications\EmailRecipientDomain.cs" />
+    <Compile Include="Notifications\EmailRecipientTypeDomain.cs" />
+    <Compile Include="Notifications\NotificationDomain.cs" />
+    <Compile Include="Notifications\NotificationStatusDomain.cs" />
+    <Compile Include="Notifications\NotificationUserDomain.cs" />
+    <Compile Include="Notifications\SmsDomain.cs" />
+    <Compile Include="Notifications\NotificationTypeDomain.cs" />
+    <Compile Include="Notifications\WebNotificationDomain.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ReportingManagement\LoggingDataWrapper.cs" />
+    <Compile Include="ReportingManagement\Sms.cs" />
+    <Compile Include="ReportingManagement\SmsDataWrapper.cs" />
+    <Compile Include="ReportingManagement\UserData.cs" />
+    <Compile Include="ReportingManagement\UsersActivityWrapper.cs" />
+    <Compile Include="RuleEngine\AddRuleActionDomain.cs" />
+    <Compile Include="RuleEngine\AddRuleConditionDomain.cs" />
+    <Compile Include="RuleEngine\RuleActionDomain.cs" />
+    <Compile Include="RuleEngine\RuleActionParameterDomain.cs" />
+    <Compile Include="RuleEngine\RuleConditionDomain.cs" />
+    <Compile Include="RuleEngine\AddRuleDomain.cs" />
+    <Compile Include="RuleEngine\RuleDomain.cs" />
+    <Compile Include="TemplateManagement\FolderDomain.cs" />
+    <Compile Include="TemplateManagement\TemplateContentDomain.cs" />
+    <Compile Include="TemplateManagement\TemplatePayloadDomain.cs" />
+    <Compile Include="TemplateManagement\TemplatePlaceholderDomain.cs" />
+    <Compile Include="TemplateManagement\TemplateDomain.cs" />
+    <Compile Include="TemplateManagement\TemplateVersionDomain.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NSI.Common\NSI.Common.csproj">
+      <Project>{D4EA37A7-2A35-4115-A274-1A943F89FBBD}</Project>
+      <Name>NSI.Common</Name>
+    </ProjectReference>
+    <Compile Include="ReportingManagement\FrequentDevicesWrapper.cs" />
+    <Compile Include="ReportingManagement\FrequentIncidentsWrapper.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

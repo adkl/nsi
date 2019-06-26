@@ -1,0 +1,342 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="AttachmentIdInvalid" xml:space="preserve">
+    <value>Provided attachment ID not valid.</value>
+  </data>
+  <data name="AttachmentWithIdDoesNotExist" xml:space="preserve">
+    <value>Attachment with provided ID does not exist.</value>
+  </data>
+  <data name="EmailMessageIdInvalid" xml:space="preserve">
+    <value>Provided email message ID not valid.</value>
+  </data>
+  <data name="EmailMessageWithIdDoesNotExist" xml:space="preserve">
+    <value>Email message with provided ID does not exist.</value>
+  </data>
+  <data name="EmailNotificationStatusIdInvalid" xml:space="preserve">
+    <value>Provided notification status ID not valid.</value>
+  </data>
+  <data name="EmailRecipientAddressAlreadyExists" xml:space="preserve">
+    <value>Email recipient with provided email address already exists.</value>
+  </data>
+  <data name="EmailRecipientAddressEmpty" xml:space="preserve">
+    <value>Email addres for recipient not provided</value>
+  </data>
+  <data name="EmailRecipientAddressInvalid" xml:space="preserve">
+    <value>Email address for recipient is not valid.</value>
+  </data>
+  <data name="EmailRecipientIdInvalid" xml:space="preserve">
+    <value>Provided email recipient ID is not valid.</value>
+  </data>
+  <data name="EmailRecipientNotProvided" xml:space="preserve">
+    <value>Email recipient details are not provided</value>
+  </data>
+  <data name="EmailRecipientTypeCodeAlreadyExists" xml:space="preserve">
+    <value>Email recipient type with provided code already exists.</value>
+  </data>
+  <data name="EmailRecipientTypeCodeLengthExceeded" xml:space="preserve">
+    <value>Email recipient type code can only have 100 characters maximum.</value>
+  </data>
+  <data name="EmailRecipientTypeIdInvalid" xml:space="preserve">
+    <value>Provided email recipient type ID not valid.</value>
+  </data>
+  <data name="EmailRecipientTypeNameLengthExceeded" xml:space="preserve">
+    <value>Email recipient type name can only have 100 characters maximum.</value>
+  </data>
+  <data name="EmailRecipientTypeNotProvided" xml:space="preserve">
+    <value>Email recipient type details are not provided.</value>
+  </data>
+  <data name="EmailRecipientTypeWithIdDoesNotExist" xml:space="preserve">
+    <value>Email recipient type with provided ID does not exist.</value>
+  </data>
+  <data name="EmailRecipientWithIdDoesNotExist" xml:space="preserve">
+    <value>Email recipient with provided ID does not exist.</value>
+  </data>
+  <data name="NotificationDateCreatedInvalid" xml:space="preserve">
+    <value>Provided notification create date not valid.</value>
+  </data>
+  <data name="NotificationDateCreatedNotProvided" xml:space="preserve">
+    <value>Notification create date is not provided.</value>
+  </data>
+  <data name="NotificationExternalIdInvalid" xml:space="preserve">
+    <value>Provided notification external ID not valid.</value>
+  </data>
+  <data name="NotificationExternalIdNotProvided" xml:space="preserve">
+    <value>Notification external ID is not provided.</value>
+  </data>
+  <data name="NotificationIdInvalid" xml:space="preserve">
+    <value>Provided notification ID not valid.</value>
+  </data>
+  <data name="NotificationNotProvided" xml:space="preserve">
+    <value>Notification details are not provided.</value>
+  </data>
+  <data name="NotificationStatusIdDoesNotExist" xml:space="preserve">
+    <value>Notification status with provided ID does not exist.</value>
+  </data>
+  <data name="NotificationStatusIdNotProvided" xml:space="preserve">
+    <value>Notification status ID is not provided.</value>
+  </data>
+  <data name="NotificationTypeCodeEmpty" xml:space="preserve">
+    <value>Notification type code not provided.</value>
+  </data>
+  <data name="NotificationTypeIdInvalid" xml:space="preserve">
+    <value>Provided notification type ID not valid.</value>
+  </data>
+  <data name="NotificationTypeIdNotProvided" xml:space="preserve">
+    <value>Notification type ID is not provided.</value>
+  </data>
+  <data name="NotificationTypeWithIdDoesNotExist" xml:space="preserve">
+    <value>Notification type with provided ID dooes not exist.</value>
+  </data>
+  <data name="NotificationWithIdDoesNotExist" xml:space="preserve">
+    <value>Notification with provided ID does not exist.</value>
+  </data>
+  <data name="NotificationStatusCodeNotProvided" xml:space="preserve">
+    <value>Notification status code not provided.</value>
+  </data>
+  <data name="NotificationStatusInvalidId" xml:space="preserve">
+    <value>Invalid notification status ID.</value>
+  </data>
+  <data name="NotificationStatusNameNotProvided" xml:space="preserve">
+    <value>Notification status name not provided.</value>
+  </data>
+  <data name="NotificationStatusNotProvided" xml:space="preserve">
+    <value>Notification status not provided.</value>
+  </data>
+  <data name="NotificationStatusWithIdDoesNotExists" xml:space="preserve">
+    <value>Notification status with provided ID does not exists.</value>
+  </data>
+  <data name="SmsInvalidId" xml:space="preserve">
+    <value>Invalid SMS ID.</value>
+  </data>
+  <data name="SmsInvalidNotificationId" xml:space="preserve">
+    <value>Invalid notification ID.</value>
+  </data>
+  <data name="SmsInvalidPhoneNumberFormat" xml:space="preserve">
+    <value>Invalid recipent phone number format.</value>
+  </data>
+  <data name="SmsInvalidSenderPhoneNumberFormat" xml:space="preserve">
+    <value>Invalid sender phone number format.</value>
+  </data>
+  <data name="SmsNotificationWithIdDoesNotExists" xml:space="preserve">
+    <value>Notification with provided ID does not exists.</value>
+  </data>
+  <data name="SmsNotProvided" xml:space="preserve">
+    <value>SMS not provided.</value>
+  </data>
+  <data name="SmsWithIdDoesNotExists" xml:space="preserve">
+    <value>SMS with provided ID does not exists.</value>
+  </data>
+  <data name="NotificationTypeNameEmpty" xml:space="preserve">
+    <value>Notification type name not provided.</value>
+  </data>
+  <data name="NotificationTypeNotProvided" xml:space="preserve">
+    <value>Notification type details not provided.</value>
+  </data>
+  <data name="WebNotificationDateSeenEmpty" xml:space="preserve">
+    <value>Web notification date seen not provided.</value>
+  </data>
+  <data name="WebNotificationIdInvalid" xml:space="preserve">
+    <value>Provided web notification ID not valid.</value>
+  </data>
+  <data name="WebNotificationNotificationIdInvalid" xml:space="preserve">
+    <value>Provided notification ID for web notification is not valid.</value>
+  </data>
+  <data name="WebNotificationNotProvided" xml:space="preserve">
+    <value>Web notification details not provided.</value>
+  </data>
+  <data name="WebNotificationWithIdDoesNotExist" xml:space="preserve">
+    <value>Web notification with provided ID does not exist.</value>
+  </data>
+  <data name="Deleted" xml:space="preserve">
+    <value>Object deleted.</value>
+  </data>
+  <data name="Updated" xml:space="preserve">
+    <value>Object updated.</value>
+  </data>
+  <data name="AttachmentFileNotProvided" xml:space="preserve">
+    <value>File is not provided.</value>
+  </data>
+  <data name="AttachmentNotProvided" xml:space="preserve">
+    <value>Attachment not provided.</value>
+  </data>
+  <data name="EmailRecipientTypeCodeEmpty" xml:space="preserve">
+    <value>Email recipient type code can't be empty.</value>
+  </data>
+  <data name="NotificationTypeCodeExists" xml:space="preserve">
+    <value>Notification type with sam code exists in database.</value>
+  </data>
+  <data name="NotificationIdNotProvided" xml:space="preserve">
+    <value>Notification id not provided.</value>
+  </data>
+  <data name="NotificationUserIdInvalid" xml:space="preserve">
+    <value>Provided notification user ID not valid.</value>
+  </data>
+  <data name="NotificationUserNotProvided" xml:space="preserve">
+    <value>Notification user is not provided.</value>
+  </data>
+  <data name="NotificationUserWithIdDoesNotExist" xml:space="preserve">
+    <value>NotificationUser with provided ID does not exist.</value>
+  </data>
+  <data name="TenantIdInvalid" xml:space="preserve">
+    <value>Provided tenant ID not valid.</value>
+  </data>
+  <data name="TenantIdNotProvided" xml:space="preserve">
+    <value>Tenant id not provided.</value>
+  </data>
+  <data name="UserIdInvalid" xml:space="preserve">
+    <value>Provided user ID not valid.</value>
+  </data>
+  <data name="UserIdNotProvided" xml:space="preserve">
+    <value>User id not provided.</value>
+  </data>
+  <data name="UserWithIdDoesNotExist" xml:space="preserve">
+    <value>User with provided ID does not exists.</value>
+  </data>
+  <data name="UserWithTenantIdDoesNotExist" xml:space="preserve">
+    <value>User with provided tenant ID does not exists.</value>
+  </data>
+  <data name="EmailMessageSent" xml:space="preserve">
+    <value>Email message successfully sent.</value>
+  </data>
+  <data name="WebNotificationUserDoesNotExist" xml:space="preserve">
+    <value>User with provided ID in web notification request does not exist.</value>
+  </data>
+  <data name="WebNotificationUserInfoIdInvalid" xml:space="preserve">
+    <value>Provided ID for user in web notification request is invalid.</value>
+  </data>
+  <data name="NotificationStatusWCodeAlreadyExists" xml:space="preserve">
+    <value>Notification status with provided code already exists.</value>
+  </data>
+  <data name="EmailMessageIdInvalidFormat" xml:space="preserve">
+    <value>Invalid Email Message ID.</value>
+  </data>
+  <data name="EmailMessageInvalidFromFormat" xml:space="preserve">
+    <value>Invalid sender email format error.</value>
+  </data>
+  <data name="EmailMessageInvalidNotificationId" xml:space="preserve">
+    <value>Invalid notification ID.</value>
+  </data>
+  <data name="EmailMessageNotificationWithIdDoesNotExists" xml:space="preserve">
+    <value>Notification with provided ID does not exist.</value>
+  </data>
+  <data name="EmailMessageNotProvided" xml:space="preserve">
+    <value>Email Message is not provided.</value>
+  </data>
+</root>

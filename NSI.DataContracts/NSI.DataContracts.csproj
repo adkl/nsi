@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{90DF127A-963E-4B8E-AAF1-CB45EF6E9C28}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>NSI.DataContracts</RootNamespace>
+    <AssemblyName>NSI.DataContracts</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Azure.Storage, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Azure.Storage.0.1.3\lib\net45\Azure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Azure.KeyVault.Core.1.0.0\lib\net40\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Edm.5.8.2\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.OData.5.8.2\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Data.Services.Client.5.8.2\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Diagnostics, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\Microsoft.WindowsAzure.Diagnostics.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.ServiceRuntime, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\Microsoft.WindowsAzure.ServiceRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=7.2.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\WindowsAzure.Storage.7.2.1\lib\net40\Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=8.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.8.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Sandboxable.Microsoft.WindowsAzure.Storage, Version=8.7.0.0, Culture=neutral, PublicKeyToken=dd461fa2f43d8736, processorArchitecture=MSIL">
+      <HintPath>..\packages\Sandboxable.Microsoft.WindowsAzure.Storage.1.1.9\lib\net452\Sandboxable.Microsoft.WindowsAzure.Storage.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Spatial, Version=5.8.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Spatial.5.8.2\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsAzureEventSource, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\WindowsAzureEventSource.dll</HintPath>
+    </Reference>
+    <Reference Include="WindowsAzureTelemetryEvents, Version=2.7.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.WindowsAzure.SDK.2.9.0\lib\WindowsAzureTelemetryEvents.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Base\BaseRequest.cs" />
+    <Compile Include="Base\BaseResponse.cs" />
+    <Compile Include="DevicePing\PingDeviceRequest.cs" />
+    <Compile Include="DevicePing\SearchDevicePingRequest.cs" />
+    <Compile Include="DevicePing\SearchDevicePingResponse.cs" />
+    <Compile Include="Documents\SearchRequest.cs" />
+    <Compile Include="Document\GetGeneratedDocRequest.cs" />
+    <Compile Include="Document\GenerateDocumentRequest.cs" />
+    <Compile Include="Incident\SearchIncidentRequest.cs" />
+    <Compile Include="Membership\Languages\AddLanguageRequest.cs" />
+    <Compile Include="Membership\Languages\AddLanguageResponse.cs" />
+    <Compile Include="Membership\Languages\GetLanguageRequest.cs" />
+    <Compile Include="Membership\Languages\GetLanguageResponse.cs" />
+    <Compile Include="Membership\Languages\SearchLanguagesRequest.cs" />
+    <Compile Include="Membership\Languages\SearchLanguagesResponse.cs" />
+    <Compile Include="Membership\Languages\UpdateLanguageRequest.cs" />
+    <Compile Include="Membership\Languages\UpdateLanguageResponse.cs" />
+    <Compile Include="Membership\Permissions\GetAllPermissionsRequest.cs" />
+    <Compile Include="Membership\Permissions\GetAllPermissionsResponse.cs" />
+    <Compile Include="Membership\RoleMember\AddRoleMemberRequest.cs" />
+    <Compile Include="Membership\RoleMember\AddRoleMemberResponse.cs" />
+    <Compile Include="Membership\RoleMember\DeleteRoleMemberResponse.cs" />
+    <Compile Include="Membership\RoleMember\GetAllRoleMembersRequest.cs" />
+    <Compile Include="Membership\RoleMember\GetAllRoleMembersResponse.cs" />
+    <Compile Include="Membership\RoleMember\GetRoleMemberByIdResponse.cs" />
+    <Compile Include="Membership\RoleMember\UpdateRoleMemberRequest.cs" />
+    <Compile Include="Membership\RoleMember\UpdateRoleMemberResponse.cs" />
+    <Compile Include="Membership\RolePermissions\AddRolePermissionResponse.cs" />
+    <Compile Include="Membership\RolePermissions\AddRolePermissionRequest.cs" />
+    <Compile Include="Membership\RolePermissions\DeleteRolePermissionResponse.cs" />
+    <Compile Include="Membership\RolePermissions\GetRolePermissionResponse.cs" />
+    <Compile Include="Membership\RolePermissions\GetRolePermissionRequest.cs" />
+    <Compile Include="Membership\RolePermissions\UpdateRolePermissionResponse.cs" />
+    <Compile Include="Membership\RolePermissions\UpdateRolePermissionRequest.cs" />
+    <Compile Include="Membership\Roles\GetAllRolesRequest.cs" />
+    <Compile Include="Membership\Roles\GetAllRolesResponse.cs" />
+    <Compile Include="Membership\Tenant\GetTenantByIdentifierResponse.cs" />
+    <Compile Include="Membership\Users\GetAllUsersRequest.cs" />
+    <Compile Include="Membership\Users\GetAllUsersResponse.cs" />
+    <Compile Include="Membership\Users\GetUserByEmailResponse.cs" />
+    <Compile Include="Membership\Users\GetUserByIdentifierResponse.cs" />
+    <Compile Include="Membership\Users\GetUserByIdResponse.cs" />
+    <Compile Include="Membership\Users\GetUserByTenantIdResponse.cs" />
+    <Compile Include="Membership\Users\SearchUserRequest.cs" />
+    <Compile Include="Membership\Users\SearchUserResponse.cs" />
+    <Compile Include="Membership\Users\UpdateUserRequest.cs" />
+    <Compile Include="Membership\Users\UpdateUserResponse.cs" />
+    <Compile Include="Notifications\Attachment\AddAttachmentRequest.cs" />
+    <Compile Include="Notifications\Attachment\AddAttachmentResponse.cs" />
+    <Compile Include="Notifications\Attachment\DeleteAttachmentRequest.cs" />
+    <Compile Include="Notifications\Attachment\DeleteAttachmentResponse.cs" />
+    <Compile Include="Notifications\Attachment\GetAllAttachmentsRequest.cs" />
+    <Compile Include="Notifications\Attachment\GetAllAttachmentsResponse.cs" />
+    <Compile Include="Notifications\Attachment\GetAttachmentRequest.cs" />
+    <Compile Include="Notifications\Attachment\GetAttachmentResponse.cs" />
+    <Compile Include="Notifications\EmailMessage\AddEmailMessageRequest.cs" />
+    <Compile Include="Notifications\EmailMessage\AddEmailMessageResponse.cs" />
+    <Compile Include="Notifications\EmailMessage\DeleteEmailMessageRequest.cs" />
+    <Compile Include="Notifications\EmailMessage\DeleteEmailMessageResponse.cs" />
+    <Compile Include="Notifications\EmailMessage\GetAllEmailMessagesRequest.cs" />
+    <Compile Include="Notifications\EmailMessage\GetAllEmailMessagesResponse.cs" />
+    <Compile Include="Notifications\EmailMessage\GetEmailMessageRequest.cs" />
+    <Compile Include="Notifications\EmailMessage\GetEmailMessageResponse.cs" />
+    <Compile Include="Notifications\EmailMessage\SearchEmailMessageRequest.cs" />
+    <Compile Include="Notifications\EmailMessage\SearchEmailMessageResponse.cs" />
+    <Compile Include="Notifications\EmailMessage\SendEmailRequest.cs" />
+    <Compile Include="Notifications\EmailMessage\SendEmailResponse.cs" />
+    <Compile Include="Notifications\EmailMessage\UpdateEmailMessageRequest.cs" />
+    <Compile Include="Notifications\EmailMessage\UpdateEmailMessageResponse.cs" />
+    <Compile Include="Document\GetGeneratedDocResponse.cs" />
+    <Compile Include="Membership\Modules\AddModuleRequest.cs" />
+    <Compile Include="Membership\Modules\AddModuleResponse.cs" />
+    <Compile Include="Membership\Modules\GetModuleRequest.cs" />
+    <Compile Include="Membership\Modules\GetModuleResponse.cs" />
+    <Compile Include="Membership\Modules\SearchModulesRequest.cs" />
+    <Compile Include="Membership\Modules\SearchModulesResponse.cs" />
+    <Compile Include="Membership\Modules\UpdateModuleRequest.cs" />
+    <Compile Include="Membership\Modules\UpdateModuleResponse.cs" />
+    <Compile Include="Membership\Permissions\AddPermissionRequest.cs" />
+    <Compile Include="Membership\Permissions\AddPermissionResponse.cs" />
+    <Compile Include="Membership\Permissions\GetPermissionRequest.cs" />
+    <Compile Include="Membership\Permissions\GetPermissionResponse.cs" />
+    <Compile Include="Membership\Permissions\SearchPermissionsRequest.cs" />
+    <Compile Include="Membership\Permissions\SearchPermissionsResponse.cs" />
+    <Compile Include="Membership\Permissions\UpdatePermissionRequest.cs" />
+    <Compile Include="Membership\Permissions\UpdatePermissionResponse.cs" />
+    <Compile Include="Membership\Roles\AddRoleResponse.cs" />
+    <Compile Include="Membership\Roles\AddRoleRequest.cs" />
+    <Compile Include="Membership\Roles\GetRoleRequest.cs" />
+    <Compile Include="Membership\Roles\GetRoleResponse.cs" />
+    <Compile Include="Membership\Roles\SearchRoleRequest.cs" />
+    <Compile Include="Membership\Roles\SearchRoleResponse.cs" />
+    <Compile Include="Membership\Roles\UpdateRoleRequest.cs" />
+    <Compile Include="Membership\Roles\UpdateRoleResponse.cs" />
+    <Compile Include="Membership\Tenant\AddTenantRequest.cs" />
+    <Compile Include="Membership\Tenant\AddTenantResponse.cs" />
+    <Compile Include="Membership\Tenant\GetTenantRequest.cs" />
+    <Compile Include="Membership\Tenant\GetTenantResponse.cs" />
+    <Compile Include="Membership\Tenant\SearchTenantRequest.cs" />
+    <Compile Include="Membership\Tenant\SearchTenantResponse.cs" />
+    <Compile Include="Membership\Tenant\UpdateTenantRequest.cs" />
+    <Compile Include="Membership\Tenant\UpdateTenantResponse.cs" />
+    <Compile Include="Membership\Users\AddUserRequest.cs" />
+    <Compile Include="Membership\Users\AddUserResponse.cs" />
+    <Compile Include="Membership\Users\GetUserRequest.cs" />
+    <Compile Include="Membership\Users\GetUserResponse.cs" />
+    <Compile Include="Notifications\EmailRecipientType\AddEmailRecipientTypeRequest.cs" />
+    <Compile Include="Notifications\EmailRecipientType\AddEmailRecipientTypeResponse.cs" />
+    <Compile Include="Notifications\EmailRecipientType\DeleteEmailRecipientTypeRequest.cs" />
+    <Compile Include="Notifications\EmailRecipientType\DeleteEmailRecipientTypeResponse.cs" />
+    <Compile Include="Notifications\EmailRecipientType\GetAllEmailRecipientTypesRequest.cs" />
+    <Compile Include="Notifications\EmailRecipientType\GetAllEmailRecipientTypesResponse.cs" />
+    <Compile Include="Notifications\EmailRecipientType\GetEmailRecipientTypeRequest.cs" />
+    <Compile Include="Notifications\EmailRecipientType\GetEmailRecipientTypeResponse.cs" />
+    <Compile Include="Notifications\EmailRecipientType\UpdateEmailRecipientTypeRequest.cs" />
+    <Compile Include="Notifications\EmailRecipientType\UpdateEmailRecipientTypeResponse.cs" />
+    <Compile Include="Notifications\EmailRecipient\AddEmailRecipientRequest.cs" />
+    <Compile Include="Notifications\EmailRecipient\AddEmailRecipientResponse.cs" />
+    <Compile Include="Notifications\EmailRecipient\DeleteEmailRecipientRequest.cs" />
+    <Compile Include="Notifications\EmailRecipient\DeleteEmailRecipientResponse.cs" />
+    <Compile Include="Notifications\EmailRecipient\GetAllEmailRecipientsRequest.cs" />
+    <Compile Include="Notifications\EmailRecipient\GetAllEmailRecipientsResponse.cs" />
+    <Compile Include="Notifications\EmailRecipient\GetEmailRecipientRequest.cs" />
+    <Compile Include="Notifications\EmailRecipient\GetEmailRecipientResponse.cs" />
+    <Compile Include="Notifications\EmailRecipient\SearchEmailRecipientRequest.cs" />
+    <Compile Include="Notifications\EmailRecipient\SearchEmailRecipientResponse.cs" />
+    <Compile Include="Notifications\EmailRecipient\UpdateEmailRecipientRequest.cs" />
+    <Compile Include="Notifications\EmailRecipient\UpdateEmailRecipientResponse.cs" />
+    <Compile Include="Notifications\NotificationStatus\DeleteNotificationStatusRequest.cs" />
+    <Compile Include="Notifications\NotificationStatus\DeleteNotificationStatusResponse.cs" />
+    <Compile Include="Notifications\NotificationStatus\GetAllNotificationStatusRequest.cs" />
+    <Compile Include="Notifications\NotificationStatus\GetAllNotificationStatusResponse.cs" />
+    <Compile Include="Notifications\NotificationStatus\GetNotificationStatusByCodeRequest.cs" />
+    <Compile Include="Notifications\NotificationStatus\GetNotificationStatusByCodeResponse.cs" />
+    <Compile Include="Notifications\NotificationType\GetAllNotificationTypeResponse.cs" />
+    <Compile Include="Notifications\NotificationUser\AddNotificationUserRequest.cs" />
+    <Compile Include="Notifications\NotificationUser\AddNotificationUserResponse.cs" />
+    <Compile Include="Notifications\NotificationUser\DeleteNotificationUserResponse.cs" />
+    <Compile Include="Notifications\NotificationUser\GetAllNotificationUserRequest.cs" />
+    <Compile Include="Notifications\NotificationUser\GetAllNotificationUserResponse.cs" />
+    <Compile Include="Notifications\NotificationUser\GetNotificationUserByIdResponse.cs" />
+    <Compile Include="Notifications\NotificationUser\GetNotificationUserByNotificationIdResponse.cs" />
+    <Compile Include="Notifications\NotificationUser\GetNotificationUserByUserIdResponse.cs" />
+    <Compile Include="Notifications\NotificationUser\UpdateNotificationUserRequest.cs" />
+    <Compile Include="Notifications\NotificationUser\UpdateNotificationUserResponse.cs" />
+    <Compile Include="Notifications\Notification\AddNotificationRequest.cs" />
+    <Compile Include="Notifications\Notification\AddNotificationResponse.cs" />
+    <Compile Include="Notifications\Notification\DeleteNotificationRequest.cs" />
+    <Compile Include="Notifications\Notification\DeleteNotificationResponse.cs" />
+    <Compile Include="Notifications\Notification\GetAllNotificationsRequest.cs" />
+    <Compile Include="Notifications\Notification\GetAllNotificationsResponse.cs" />
+    <Compile Include="Notifications\Notification\GetNotificationByCreatedDateResponse.cs" />
+    <Compile Include="Notifications\Notification\GetNotificationByExternalIdResponse.cs" />
+    <Compile Include="Notifications\Notification\GetNotificationByIdResponse.cs" />
+    <Compile Include="Notifications\Notification\SearchNotificationRequest.cs" />
+    <Compile Include="Notifications\Notification\SearchNotificationResponse.cs" />
+    <Compile Include="Notifications\Notification\UpdateNotificationRequest.cs" />
+    <Compile Include="Notifications\Notification\UpdateNotificationResponse.cs" />
+    <Compile Include="Notifications\NotificationStatus\AddNotificationStatusRequest.cs" />
+    <Compile Include="Notifications\NotificationStatus\AddNotificationStatusResponse.cs" />
+    <Compile Include="Notifications\NotificationStatus\GetNotificationStatusRequest.cs" />
+    <Compile Include="Notifications\NotificationStatus\GetNotificationStatusResponse.cs" />
+    <Compile Include="Notifications\NotificationStatus\SearchNotificationStatusRequest.cs" />
+    <Compile Include="Notifications\NotificationStatus\SearchNotificationStatusResponse.cs" />
+    <Compile Include="Notifications\NotificationStatus\UpdateNotificationStatusRequest.cs" />
+    <Compile Include="Notifications\NotificationStatus\UpdateNotificationStatusResponse.cs" />
+    <Compile Include="Notifications\Sms\AddSmsRequest.cs" />
+    <Compile Include="Notifications\Sms\AddSmsResponse.cs" />
+    <Compile Include="Notifications\Sms\DeleteSmsRequest.cs" />
+    <Compile Include="Notifications\Sms\DeleteSmsResponse.cs" />
+    <Compile Include="Notifications\Sms\GetSmsByNotificationIdRequest.cs" />
+    <Compile Include="Notifications\Sms\GetSmsByNotificationIdResponse.cs" />
+    <Compile Include="Notifications\Sms\GetSmsRequest.cs" />
+    <Compile Include="Notifications\Sms\GetSmsResponse.cs" />
+    <Compile Include="Notifications\Sms\SearchSmsRequest.cs" />
+    <Compile Include="Notifications\Sms\SearchSmsResponse.cs" />
+    <Compile Include="Notifications\Sms\SendSmsRequest.cs" />
+    <Compile Include="Notifications\Sms\SendSmsResponse.cs" />
+    <Compile Include="Notifications\Sms\UpdateSmsRequest.cs" />
+    <Compile Include="Notifications\Sms\UpdateSmsResponse.cs" />
+    <Compile Include="Notifications\WebNotification\AddWebNotificationRequest.cs" />
+    <Compile Include="Notifications\WebNotification\GetAllWebNotificationResponse.cs" />
+    <Compile Include="Notifications\WebNotification\UpdateWebNotificationRequest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Notifications\NotificationType\AddNotificationTypeRequest.cs" />
+    <Compile Include="Notifications\NotificationType\AddNotificationTypeResponse.cs" />
+    <Compile Include="Notifications\WebNotification\AddWebNotificationResponse.cs" />
+    <Compile Include="Notifications\NotificationType\GetNotificationTypeResponse.cs" />
+    <Compile Include="Notifications\WebNotification\GetWebNotificationResponse.cs" />
+    <Compile Include="Notifications\NotificationType\UpdateNotificationTypeRequest.cs" />
+    <Compile Include="Notifications\NotificationType\UpdateNotificationTypeResponse.cs" />
+    <Compile Include="Notifications\WebNotification\UpdateWebNotificationResponse.cs" />
+    <Compile Include="RuleEngine\GetRulesRequest.cs" />
+    <Compile Include="RuleEngine\GetRulesResponse.cs" />
+    <Compile Include="TemplateManagement\CreateFolderRequest.cs" />
+    <Compile Include="TemplateManagement\CreateFolderResponse.cs" />
+    <Compile Include="TemplateManagement\CreateTemplateRequest.cs" />
+    <Compile Include="TemplateManagement\CreateTemplateResponse.cs" />
+    <Compile Include="TemplateManagement\DeleteTemplateRequest.cs" />
+    <Compile Include="TemplateManagement\DeleteTemplateResponse.cs" />
+    <Compile Include="TemplateManagement\DeleteTemplateVersionRequest.cs" />
+    <Compile Include="TemplateManagement\DeleteTemplateVersionResponse.cs" />
+    <Compile Include="TemplateManagement\GetFoldersRequest.cs" />
+    <Compile Include="TemplateManagement\GetFoldersResponse.cs" />
+    <Compile Include="TemplateManagement\GetTemplatesRequest.cs" />
+    <Compile Include="TemplateManagement\GetTemplatesResponse.cs" />
+    <Compile Include="TemplateManagement\GetTemplateVersionResponse.cs" />
+    <Compile Include="TemplateManagement\GetTemplateVersionsRequest.cs" />
+    <Compile Include="TemplateManagement\GetTemplateVersionsResponse.cs" />
+    <Compile Include="TemplateManagement\SimplePagingRequest.cs" />
+    <Compile Include="TemplateManagement\CreateTemplateVersionRequest.cs" />
+    <Compile Include="TemplateManagement\CreateTemplateVersionResponse.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\NSI.Common\NSI.Common.csproj">
+      <Project>{D4EA37A7-2A35-4115-A274-1A943F89FBBD}</Project>
+      <Name>NSI.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\NSI.Domain\NSI.Domain.csproj">
+      <Project>{01C53D26-9736-413C-A247-8612349B66CB}</Project>
+      <Name>NSI.Domain</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
